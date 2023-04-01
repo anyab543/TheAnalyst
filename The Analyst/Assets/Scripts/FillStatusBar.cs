@@ -10,35 +10,35 @@ using UnityEngine.UI;
 public class FillStatusBar : MonoBehaviour
 {
     
-    public PlayerHealth playerHealth;
-    public Image fillImage;
-    private Slider slider;
+    // //public PlayerHealth playerHealth;
+    // public Image fillImage;
+    // private Slider slider;
     
-    // Start is called before the first frame update
-    void Awake()
-    {
-        slider = GetComponent<slider>();
-    }
+    // // Start is called before the first frame update
+    // void Awake()
+    // {
+    //     slider = GetComponent<slider>();
+    // }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (slider.value <= slider.minValue) {
-            fillImage.enabled = false;
-        }
+    // // Update is called once per frame
+    // void Update()
+    // {
+    //     if (slider.value <= slider.minValue) {
+    //         fillImage.enabled = false;
+    //     }
 
-        if (slider.value > slider.minValue && !fillImage.enabled) {
-            fillImage.enabled = true;
-        }
+    //     if (slider.value > slider.minValue && !fillImage.enabled) {
+    //         fillImage.enabled = true;
+    //     }
 
-        float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
-        if (fillValue <= slider.maxValue / 3) {
-            fillImage.color = color.white; // critical condition
-        } else {
-            fillImage.color = color.red;
-        }
+    //     float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
+    //     if (fillValue <= slider.maxValue / 3) {
+    //         fillImage.color = color.white; // critical condition
+    //     } else {
+    //         fillImage.color = color.red;
+    //     }
 
 
-        slider.value = fillValue;
-    }
+    //     slider.value = fillValue;
+    // }
 }
