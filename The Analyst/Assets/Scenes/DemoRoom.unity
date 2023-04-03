@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1065222078}
   - component: {fileID: 1065222077}
   - component: {fileID: 1065222076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 1381017130}
   - component: {fileID: 1381017129}
   - component: {fileID: 1381017128}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +762,7 @@ MonoBehaviour:
   feet: {fileID: 1076892713}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 1894081733}
   - component: {fileID: 1894081732}
   - component: {fileID: 1894081731}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
