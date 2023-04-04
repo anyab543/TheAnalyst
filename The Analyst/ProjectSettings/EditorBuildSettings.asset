@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/DemoRoom.unity
+    guid: a05700ca853334bdab292182638f1c3c
+  - enabled: 1
+    path: Assets/Scenes/PlayerTogether.unity
+    guid: e9f6ed1928a3d4226a72223cec9ca847
+  - enabled: 1
     path: Assets/Scenes/MouseShoot.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/HealthBar.unity
+    guid: 3dbda97764bf04d3ab0fe4130556ba3a
+  - enabled: 1
+    path: Assets/Scenes/6thSenseTest.unity
+    guid: 1db616940bbfe4f4298c9ee98c7400fb
   m_configObjects: {}
