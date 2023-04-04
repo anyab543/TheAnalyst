@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142818205}
   - component: {fileID: 142818206}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sidescroller_Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ MonoBehaviour:
   feet: {fileID: 769818660}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 778059834}
   - component: {fileID: 778059833}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LevelBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
