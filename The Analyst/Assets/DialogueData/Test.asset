@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5908941b895d408b9e6ff18bef1aefe, type: 3}
-  m_Name: New Dialogue Object
+  m_Name: Test
   m_EditorClassIdentifier: 

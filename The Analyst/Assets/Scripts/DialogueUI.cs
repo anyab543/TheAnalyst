@@ -1,13 +1,30 @@
 using UnityEngine;
 using TMPro;
-
+using System.Collections;
+using System.Collections.Generic; 
 
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text textLabel;
+    [SerializeField] private DialogueObject testDialogue;
+
+    private TypewriterEffect typewriterEffect;
 
     private void Start()
     {
-        GetComponent<TypewriterEffect>(). Run(textToType:"This is some text\nHello!", textLabel);
+        typewriterEffect = GetComponent<TypewriterEffect>();
+    }
+
+    public void ShowDialogue(DialogueObject dialogueObject)
+    {
+
+    }
+
+    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
+    {
+        foreach (string dialogue in dialogueObject.Dialogue)
+        {
+            yield return typewriterEffect.Run(dialogue, textLabel);
+        }
     }
 }
