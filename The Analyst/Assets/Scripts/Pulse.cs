@@ -10,6 +10,10 @@ public class Pulse : MonoBehaviour
     private List<Collider2D> alreadyPinged;
     private bool pulseIsActive;
 
+    public AudioClip activate_sound;
+    public AudioClip hit_sound;
+    private AudioSource audioS;
+
     void Start() {
         pulseIsActive = false;
     }
@@ -18,12 +22,16 @@ public class Pulse : MonoBehaviour
         pulseTransform = transform.Find("Pulse_Graphic");
         rangeMax = 45f;
         alreadyPinged = new List<Collider2D>();
+        audioS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKey(KeyCode.E)) {
+            if (pulseIsActive == false) {
+                audioS.PlayOneShot(activate_sound);
+            }
             pulseIsActive = true;
         }
         
@@ -51,6 +59,7 @@ public class Pulse : MonoBehaviour
                             objectHit.SetActive(true);
                             objectHit.GetComponent<PulseReveal>().setTimer();
                             Debug.Log("hit hidden object!");
+                            audioS.PlayOneShot(hit_sound);
                         } else {
                             Debug.Log("hit visibile object!");
                         }
