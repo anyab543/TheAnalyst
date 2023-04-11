@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class ResponseHandler : MonoBehaviour
 {
@@ -19,7 +20,12 @@ public class ResponseHandler : MonoBehaviour
             GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
             responseButton.gameObject.SetActive(true);
             responseButton.GetComponent<TMP_Text>().text = response.ResponseText;
-            responseButton.GetComponent<Button>().onClick.Addlistener(() => OnPickedResponse(response))
+            responseButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response));
         }
+    }
+
+    private void OnPickedResponse(Response response)
+    {
+        throw new NotImplementedException();
     }
 }
