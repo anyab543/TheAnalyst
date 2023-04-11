@@ -8,9 +8,11 @@ public class BulletScript : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
+    private float time;
     // Start is called before the first frame update
     void Start()
     {
+        time = 0;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -24,6 +26,9 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time++;
+        if (time >= 600) {
+            Destroy(gameObject);
+        }
     }
 }

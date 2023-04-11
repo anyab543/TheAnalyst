@@ -12,16 +12,38 @@ public class PlayerMove : MonoBehaviour {
       public bool isAlive = true; 
       //public AudioSource WalkSFX;
       private Vector3 hMove; 
+      private bool isSwimming = false;
+      public float moveSpeed = 5f;
+      public float swimSpeed = 5f;
+      public float swimGravity = 0.05f;
+      public float swimDrag = 2f;
+      public float swimAngularDrag = 1f;
 
       void Start(){
            //animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
       }
 
+      void OnTriggerEnter2D(Collider2D other)
+      {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
+            {
+                  isSwimming = true;
+            }
+      }
+
+      void OnTriggerExit2D(Collider2D other)
+      {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
+            {
+                  isSwimming = false;
+            }
+      }
+
       void Update(){
             //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1 
            hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
-           if (isAlive == true){
+           if (isAlive == true && !isSwimming) {
                   transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
 
                   if (Input.GetAxis("Horizontal") != 0){ 
@@ -29,15 +51,29 @@ public class PlayerMove : MonoBehaviour {
                   //       if (!WalkSFX.isPlaying){ 
                   //             WalkSFX.Play(); 
                   //      } 
-                  } else { 
+                  } 
+                  else { 
                   //      animator.SetBool ("Walk", false); 
                   //      WalkSFX.Stop(); 
                   } 
 
                   // Turning: Reverse if input is moving the Player right and Player faces left 
-                 if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)){
+                 if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
+
                   } 
-           }
+            }
+
+            else if (isSwimming && isAlive)
+            {
+                  // Get input for swimming movement
+                  float moveHorizontal = Input.GetAxis("Horizontal");
+                  float moveVertical = Input.GetAxis("Vertical");
+
+                  // Set the player's velocity based on input
+                  Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+                  rb2D.velocity = movement * swimSpeed;
+            }
+
       } 
 
       void FixedUpdate(){
@@ -47,7 +83,8 @@ public class PlayerMove : MonoBehaviour {
             }
       } 
 
-      private void playerTurn(){
+      void playerTurn()
+      {
             // NOTE: Switch player facing label
             FaceRight = !FaceRight;
 
@@ -56,4 +93,5 @@ public class PlayerMove : MonoBehaviour {
             theScale.x *= -1;
             transform.localScale = theScale;
       }
+
 }
