@@ -13811,6 +13811,11 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
+  moveSpeed: 5
+  swimSpeed: 5
+  swimGravity: 0.05
+  swimDrag: 2
+  swimAngularDrag: 1
 --- !u!50 &1921875901
 Rigidbody2D:
   serializedVersion: 4
