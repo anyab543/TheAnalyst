@@ -1288,8 +1288,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1830036681}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6489,7 +6488,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &763287671
 Canvas:
   m_ObjectHideFlags: 0
@@ -6499,7 +6498,7 @@ Canvas:
   m_GameObject: {fileID: 763287668}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -6520,22 +6519,21 @@ RectTransform:
   m_GameObject: {fileID: 763287668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1134929859}
   - {fileID: 1463949928}
   - {fileID: 1171546085}
   - {fileID: 1590340749}
-  - {fileID: 1251414555}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.07, y: 0.04}
+  m_SizeDelta: {x: 24.6891, y: 14.6684}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &771864789
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,22 +8429,22 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251414554}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.47125, y: 1.47125, z: 1.47125}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1562313270}
   - {fileID: 735108491}
   - {fileID: 752364933}
   - {fileID: 1979213383}
-  m_Father: {fileID: 763287672}
-  m_RootOrder: 4
+  m_Father: {fileID: 1761219509}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -377.00006, y: -212.04251}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1251414556
 MonoBehaviour:
@@ -11997,7 +11995,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -12014,6 +12012,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1435546836}
+  - {fileID: 1251414555}
+  - {fileID: 1830036681}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12383,7 +12383,7 @@ GameObject:
   - component: {fileID: 1821523418}
   - component: {fileID: 1821523417}
   - component: {fileID: 1821523416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12526,13 +12526,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 278708485}
-  m_RootOrder: 0
+  m_Father: {fileID: 1761219509}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281.5807, y: -136.16125}
-  m_SizeDelta: {x: 138.8856, y: 49.6775}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -144, y: 95}
+  m_SizeDelta: {x: 138.88562, y: 49.67749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830036682
 MonoBehaviour:
@@ -13553,7 +13553,7 @@ GameObject:
   - component: {fileID: 2054659527}
   - component: {fileID: 2054659526}
   - component: {fileID: 2054659525}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
