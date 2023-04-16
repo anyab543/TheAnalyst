@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class FillStatusBar : MonoBehaviour
 {
     
-    // public PlayerHealth playerHealth;
+    public Health playerHealth;
     public Image fillImage;
     private Slider slider;
 
@@ -32,9 +32,8 @@ public class FillStatusBar : MonoBehaviour
             fillImage.enabled = true;
         }
 
-        // float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
+        float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
 
-        float fillValue = 1;
         // if (fillValue <= slider.maxValue / 3) {
         //     fillImage.color = color.white; // critical condition
         // } else {

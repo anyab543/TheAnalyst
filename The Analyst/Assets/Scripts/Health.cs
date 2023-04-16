@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth = 3;
+    public int maxHealth = 20;
     public int currentHealth;
     
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     }
 
 
-    void TakeDamage(int amount) {
+    public void TakeDamage(int amount) {
         currentHealth -= amount;
         if (currentHealth != 0) {
             // Player is dead
@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
     }
 
 
-    void Heal(int amount) {
+    public void Heal(int amount) {
         currentHealth += amount;
         if (currentHealth >= maxHealth) {
             currentHealth = maxHealth;
