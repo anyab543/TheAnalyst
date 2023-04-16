@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AutoMove : MonoBehaviour
 {
+    public bool isMoving;
     private float y;
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,9 @@ public class AutoMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        y = y - 0.04f;
-        transform.position = new Vector3 (22, y, -10);
+        if (isMoving) {
+            y = y - 0.04f;
+            transform.position = new Vector3 (22, y, -10);
+        }
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour { 
 
-      //public Animator animator;
       public Rigidbody2D rb2D;
       private bool FaceRight = true; // determine which way player is facing. 
       public static float runSpeed = 10f; 
@@ -13,12 +12,13 @@ public class PlayerMove : MonoBehaviour {
       //public AudioSource WalkSFX;
       private Vector3 hMove; 
       private bool isSwimming = false;
-      public float moveSpeed = 5f;
       public float swimSpeed = 5f;
-      public float swimGravity = 0.05f;
+      public float swimGravity = 1f;
       public float swimDrag = 2f;
       public float swimAngularDrag = 1f;
       public Animator animator;
+      public float originalDrag;
+      public float originalAngularDrag;
 
       void Start(){
            animator = gameObject.GetComponentInChildren<Animator>();
@@ -31,6 +31,11 @@ public class PlayerMove : MonoBehaviour {
             {
                   isSwimming = true;
                   animator.SetBool("isSwimming", isSwimming);
+                  originalDrag = rb2D.drag;
+                  originalAngularDrag = rb2D.angularDrag;
+                  rb2D.drag = swimDrag;
+                  rb2D.angularDrag = swimAngularDrag;
+                  rb2D.gravityScale = swimGravity;
             }
       }
 
@@ -40,6 +45,9 @@ public class PlayerMove : MonoBehaviour {
             {
                   isSwimming = false;
                   animator.SetBool("isSwimming", isSwimming);
+                  rb2D.drag = originalDrag;
+                  rb2D.angularDrag = originalAngularDrag;
+                  rb2D.gravityScale = 1;
             }
       }
 
@@ -77,7 +85,6 @@ public class PlayerMove : MonoBehaviour {
                   Vector2 movement = new Vector2(moveHorizontal, moveVertical);
                   rb2D.velocity = movement * swimSpeed;
             }
-
       } 
 
       void FixedUpdate(){
