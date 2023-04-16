@@ -18,9 +18,10 @@ public class PlayerMove : MonoBehaviour {
       public float swimGravity = 0.05f;
       public float swimDrag = 2f;
       public float swimAngularDrag = 1f;
+      public Animator animator;
 
       void Start(){
-           //animator = gameObject.GetComponentInChildren<Animator>();
+           animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
       }
 
@@ -29,6 +30,7 @@ public class PlayerMove : MonoBehaviour {
             if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
             {
                   isSwimming = true;
+                  animator.SetBool("isSwimming", isSwimming);
             }
       }
 
@@ -37,6 +39,7 @@ public class PlayerMove : MonoBehaviour {
             if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
             {
                   isSwimming = false;
+                  animator.SetBool("isSwimming", isSwimming);
             }
       }
 
@@ -47,12 +50,13 @@ public class PlayerMove : MonoBehaviour {
                   transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
 
                   if (Input.GetAxis("Horizontal") != 0){ 
-                  //       animator.SetBool ("Walk", true); 
+                        animator.SetBool ("isWalking", true); 
                   //       if (!WalkSFX.isPlaying){ 
                   //             WalkSFX.Play(); 
                   //      } 
                   } 
                   else { 
+                        animator.SetBool ("isWalking", false); 
                   //      animator.SetBool ("Walk", false); 
                   //      WalkSFX.Stop(); 
                   } 
