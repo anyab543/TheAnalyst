@@ -32,8 +32,7 @@ public class FillStatusBar : MonoBehaviour
             fillImage.enabled = true;
         }
 
-        float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
-
+        float fillValue = (float)(playerHealth.currentHealth) / (float)playerHealth.maxHealth;
         // if (fillValue <= slider.maxValue / 3) {
         //     fillImage.color = color.white; // critical condition
         // } else {

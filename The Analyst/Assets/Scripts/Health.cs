@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth = 20;
+    public int maxHealth;
     public int currentHealth;
     
     // Start is called before the first frame update
@@ -13,14 +13,16 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    public bool isDead() {
+        if (currentHealth <= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public void TakeDamage(int amount) {
         currentHealth -= amount;
-        if (currentHealth != 0) {
-            // Player is dead
-            // Play death animation
-            // Show Gameover screen 
-        }
     }
 
 
