@@ -11355,6 +11355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ae86f6d65bd4ba1a67a3ce7ff34dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 2108567988}
   fillImage: {fileID: 405909129}
 --- !u!114 &740017645
 MonoBehaviour:
@@ -13909,12 +13910,13 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
-  moveSpeed: 5
   swimSpeed: 5
   swimGravity: 0.05
   swimDrag: 2
   swimAngularDrag: 1
   animator: {fileID: 0}
+  originalDrag: 0
+  originalAngularDrag: 0
 --- !u!50 &2108567991
 Rigidbody2D:
   serializedVersion: 4
