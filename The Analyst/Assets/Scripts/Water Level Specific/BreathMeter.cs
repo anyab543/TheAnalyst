@@ -7,7 +7,7 @@ public class BreathMeter : MonoBehaviour
 {
     public Slider slider;
     public float timer_curr;
-    public float bubble_value;
+    private float bubble_value;
     
 
     public Image black_screen;
@@ -32,6 +32,7 @@ public class BreathMeter : MonoBehaviour
         shade_amount = 0;
         audioS = GetComponent<AudioSource>();
         back_fill = GetComponent<Image>();
+        bubble_value = 15f;
 
         frames = 0;
     }

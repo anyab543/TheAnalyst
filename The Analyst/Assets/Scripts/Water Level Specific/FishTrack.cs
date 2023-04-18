@@ -49,7 +49,8 @@ public class FishTrack : MonoBehaviour
         if (target != null && inRange){
 			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
 			Vector2 lookDir = target.position - transform.position;
-			float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 30f;
+			
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 180f;
 			rb.rotation = angle;
 		}
     }
