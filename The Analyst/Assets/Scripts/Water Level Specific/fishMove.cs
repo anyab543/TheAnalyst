@@ -13,6 +13,7 @@ public class fishMove : MonoBehaviour
     private bool inRange;
 
     public bool left;
+    private SpriteRenderer spr;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,11 @@ public class fishMove : MonoBehaviour
 
         camera = GameObject.FindWithTag("MainCamera");
         inRange = false;
+
+        spr = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        if (left) {
+            spr.flipX = true;
+        }
     }
 
     // Update is called once per frame
