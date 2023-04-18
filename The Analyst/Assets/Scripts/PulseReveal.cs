@@ -25,7 +25,7 @@ public class PulseReveal : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        disappearTimerCurr += Time.deltaTime / 3;
+        disappearTimerCurr += Time.deltaTime / 4;
 
         color.a = Mathf.Lerp(disappearTimerMax, 0f, disappearTimerCurr / disappearTimerMax);
         spriteRenderer.color = color;

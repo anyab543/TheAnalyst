@@ -17,6 +17,10 @@ public class BreathMeter : MonoBehaviour
     private AudioSource audioS;
     private Image back_fill;
 
+    public Health playerHealth;
+
+    private int frames;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,18 @@ public class BreathMeter : MonoBehaviour
         shade_amount = 0;
         audioS = GetComponent<AudioSource>();
         back_fill = GetComponent<Image>();
+
+        frames = 0;
+    }
+
+    void FixedUpdate() {
+        
+        if (timer_curr == 0) {
+            frames++;
+            if (frames % 3 == 0) {
+                playerHealth.TakeDamage(1);
+            }
+        }
     }
 
     // Update is called once per frame
