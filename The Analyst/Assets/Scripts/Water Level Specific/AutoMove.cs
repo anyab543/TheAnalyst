@@ -16,8 +16,8 @@ public class AutoMove : MonoBehaviour
     void FixedUpdate()
     {
         if (isMoving && y > -329) {
-            //y = y - 0.04f;
-            y = y - 0.1f;
+            y = y - 0.04f;
+            //y = y - 0.1f;
             transform.position = new Vector3 (22, y, -10);
         }
     }
