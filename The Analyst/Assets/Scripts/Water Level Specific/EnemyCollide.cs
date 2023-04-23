@@ -8,6 +8,7 @@ public class EnemyCollide : MonoBehaviour
     private Health enemyHealth;
     private bool canDamage;
     private int damageTimer;
+    private AudioSource hit_sfx;
     
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class EnemyCollide : MonoBehaviour
         canDamage = true;
         damageTimer = 0;
         enemyHealth = GetComponent<Health>();
+        hit_sfx = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() {
@@ -33,6 +35,7 @@ public class EnemyCollide : MonoBehaviour
         }
 
         if(other.transform.CompareTag("Bullet")) {
+            hit_sfx.Play();
             enemyHealth.TakeDamage(1);
             if (enemyHealth.isDead()) {
                 Destroy(gameObject);

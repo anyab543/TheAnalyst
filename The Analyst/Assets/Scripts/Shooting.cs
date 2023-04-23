@@ -10,11 +10,13 @@ public class Shooting : MonoBehaviour
     public Transform bulletTransform;
     public bool canFire;
     public float timeBetweenFiring;
+    private AudioSource shoot_sound;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        shoot_sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButton(0) && canFire) {
             canFire = false;
+            shoot_sound.Play();
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             StartCoroutine(WaitForShoot());
         }

@@ -12,11 +12,15 @@ public class fishMove : MonoBehaviour
     private float distanceFromCamera;
     private bool inRange;
 
+    private float speed;
+
     public bool left;
     private SpriteRenderer spr;
     // Start is called before the first frame update
     void Start()
     {
+        speed = Random.Range(0.04f, 0.07f);
+        
         currentX = transform.position.x;
         currentY = transform.position.y;
         currentLocation = new Vector2(currentX, currentY);
@@ -35,7 +39,7 @@ public class fishMove : MonoBehaviour
     {
         cameraLocation = new Vector2(22, camera.transform.position.y);
         distanceFromCamera = (currentLocation.y - cameraLocation.y);
-        if (distanceFromCamera < 20 && distanceFromCamera > -20) {
+        if (distanceFromCamera < 15 && distanceFromCamera > -15) {
             inRange = true;
         }
     }
@@ -44,9 +48,9 @@ public class fishMove : MonoBehaviour
     void FixedUpdate() {
         if (inRange) {
             if(left == true) {
-                currentX = currentX - 0.05f;
+                currentX = currentX - speed;
             } else {
-                currentX = currentX + 0.05f;
+                currentX = currentX + speed;
             }
             
             transform.position = new Vector3 (currentX, currentY, 0);
