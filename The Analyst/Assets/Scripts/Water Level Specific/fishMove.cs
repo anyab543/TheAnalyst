@@ -19,7 +19,7 @@ public class fishMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = Random.Range(0.04f, 0.07f);
+        speed = Random.Range(0.04f, 0.08f);
         
         currentX = transform.position.x;
         currentY = transform.position.y;

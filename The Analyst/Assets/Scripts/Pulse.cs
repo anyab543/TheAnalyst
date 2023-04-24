@@ -57,11 +57,16 @@ public class Pulse : MonoBehaviour
                         if (transformHit.CompareTag("Hidden")) {
                             GameObject objectHit = transformHit.GetChild(0).gameObject;
                             objectHit.SetActive(true);
-                            objectHit.GetComponent<PulseReveal>().setTimer();
-                            Debug.Log("hit hidden object!");
+                            if (objectHit.CompareTag("Dreamer")) {
+                                Debug.Log("Hit Dreamer");
+                            } else {
+                                objectHit.GetComponent<PulseReveal>().setTimer();
+                            }
+
+                            //Debug.Log("hit hidden object!");
                             audioS.PlayOneShot(hit_sound);
                         } else {
-                            Debug.Log("hit visibile object!");
+                            //Debug.Log("hit visibile object!");
                         }
                     
                     }

@@ -99,4 +99,13 @@ public class BreathMeter : MonoBehaviour
 
         }
     }
+
+    public void fill_meter() {
+        timer_curr = 100;
+
+        near_drowning = false;
+        black_screen.color = new Color32(0,0,0,0);
+        back_fill.color = new Color32(255,255,255,255);
+
+    }
 }

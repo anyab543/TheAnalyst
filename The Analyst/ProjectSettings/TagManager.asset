@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Bullet
   - PauseMenuSlider
+  - Dreamer
+  - breathMeter
+  - TransitionHandler
   layers:
   - Default
   - TransparentFX
