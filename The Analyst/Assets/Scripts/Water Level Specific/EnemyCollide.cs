@@ -13,9 +13,17 @@ public class EnemyCollide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         canDamage = true;
         damageTimer = 0;
-        enemyHealth = GetComponent<Health>();
+        if (this.transform.CompareTag("WaterLevelGhost")) {
+            enemyHealth = transform.parent.gameObject.GetComponent<Health>();
+        } else {
+            enemyHealth = GetComponent<Health>();
+        }
+        
+
+
         hit_sfx = GetComponent<AudioSource>();
     }
 
@@ -38,7 +46,12 @@ public class EnemyCollide : MonoBehaviour
             hit_sfx.Play();
             enemyHealth.TakeDamage(1);
             if (enemyHealth.isDead()) {
-                Destroy(gameObject);
+                if (this.transform.CompareTag("WaterLevelGhost")) {
+                    Destroy(transform.parent.gameObject);
+                } else {
+                    Destroy(gameObject);
+                }
+                
             }
             Destroy(other.transform.gameObject);
         }

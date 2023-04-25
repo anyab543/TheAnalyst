@@ -11,6 +11,7 @@ TagManager:
   - Dreamer
   - breathMeter
   - TransitionHandler
+  - WaterLevelGhost
   layers:
   - Default
   - TransparentFX
