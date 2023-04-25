@@ -6,7 +6,7 @@ public class FishTrack : MonoBehaviour
 {
     private Vector2 currentLocation;
     private Vector2 cameraLocation;
-    private GameObject camera;
+    private GameObject cam;
     private float currentX;
     private float currentY;
     private float distanceFromCamera;
@@ -25,7 +25,7 @@ public class FishTrack : MonoBehaviour
         currentY = transform.position.y;
         currentLocation = new Vector2(currentX, currentY);
 
-        camera = GameObject.FindWithTag("MainCamera");
+        cam = GameObject.FindWithTag("MainCamera");
         inRange = false;
 
         rb = this.GetComponent<Rigidbody2D>();
@@ -38,7 +38,7 @@ public class FishTrack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cameraLocation = new Vector2(22, camera.transform.position.y);
+        cameraLocation = new Vector2(22, cam.transform.position.y);
         distanceFromCamera = (currentLocation.y - cameraLocation.y);
         if (distanceFromCamera < 20 && distanceFromCamera > -20) {
             inRange = true;
