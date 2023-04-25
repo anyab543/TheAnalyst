@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour { 
 
       public Rigidbody2D rb2D;
-      private bool FaceRight = true; // determine which way player is facing. 
+      private bool FaceRight = false; // determine which way player is facing. 
       public static float runSpeed = 10f; 
       public float startSpeed = 10f;
       public bool isAlive = true; 
@@ -19,10 +19,12 @@ public class PlayerMove : MonoBehaviour {
       public Animator animator;
       public float originalDrag;
       public float originalAngularDrag;
+      private Transform playerArt;
 
       void Start(){
            animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+           playerArt = transform.Find("PlayerArt");
       }
 
       void OnTriggerEnter2D(Collider2D other)
@@ -70,9 +72,7 @@ public class PlayerMove : MonoBehaviour {
                   } 
 
                   // Turning: Reverse if input is moving the Player right and Player faces left 
-                 if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
 
-                  } 
             }
 
             else if (isSwimming && isAlive)
@@ -85,6 +85,10 @@ public class PlayerMove : MonoBehaviour {
                   Vector2 movement = new Vector2(moveHorizontal, moveVertical);
                   rb2D.velocity = movement * swimSpeed;
             }
+
+            if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
+                  playerTurn();
+            } 
       } 
 
       void FixedUpdate(){
@@ -100,9 +104,9 @@ public class PlayerMove : MonoBehaviour {
             FaceRight = !FaceRight;
 
             // NOTE: Multiply player's x local scale by -1.
-            Vector3 theScale = transform.localScale;
+            Vector3 theScale = playerArt.localScale;
             theScale.x *= -1;
-            transform.localScale = theScale;
+            playerArt.localScale = theScale;
       }
 
 }

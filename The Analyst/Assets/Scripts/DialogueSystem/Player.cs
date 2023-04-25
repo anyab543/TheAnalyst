@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private DialogueUI dialogueUI;
+    // [SerializeField] private DialogueUI dialogueUI;
 
 
-    public DialogueUI DialogueUI => dialogueUI;
-    public IInteractable Interactable { get; set; }
+    // public DialogueUI DialogueUI => dialogueUI;
+    // public IInteractable Interactable { get; set; }
     public Rigidbody2D rb2D;
     private bool FaceRight = true; // determine which way player is facing. 
     public static float runSpeed = 10f;
@@ -98,14 +98,14 @@ public class Player : MonoBehaviour
             rb2D.velocity = movement * swimSpeed;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (Interactable != null)
-            {
-                Interactable.Interact(this);
-            }
+    //     if (Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         if (Interactable != null)
+    //         {
+    //             Interactable.Interact(this);
+    //         }
             
-        }
+    //     }
     }
 
     void FixedUpdate()
@@ -128,8 +128,8 @@ public class Player : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    private void LateUpdate()
-    {
-        if (dialogueUI.IsOpen) return;
-    }
+//     private void LateUpdate()
+//     {
+//         if (dialogueUI.IsOpen) return;
+//     }
 }
