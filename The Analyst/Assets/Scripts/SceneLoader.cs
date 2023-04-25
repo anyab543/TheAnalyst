@@ -7,4 +7,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Water_Level");
     }
+
+    public void LoadScene2()
+    {
+        SceneManager.LoadScene("RunningLevel");
+    }
 }
