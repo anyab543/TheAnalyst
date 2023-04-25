@@ -9,6 +9,12 @@ public class EnemyCollide : MonoBehaviour
     private bool canDamage;
     private int damageTimer;
     private AudioSource hit_sfx;
+    private Color originalColor;
+    private SpriteRenderer rend;
+    private Color hitColor;
+
+
+    // private Rigidbody2D rb;
     
     // Start is called before the first frame update
     void Start()
@@ -21,8 +27,11 @@ public class EnemyCollide : MonoBehaviour
         } else {
             enemyHealth = GetComponent<Health>();
         }
-        
+        rend = gameObject.GetComponentInChildren<SpriteRenderer>();
+        // rb = gameObject.GetComponent<Rigidbody2D>();
+        originalColor = rend.color;
 
+        hitColor = Color.red;
 
         hit_sfx = GetComponent<AudioSource>();
     }
@@ -32,17 +41,26 @@ public class EnemyCollide : MonoBehaviour
             damageTimer--;
         } else {
             canDamage = true;
+            //rend.color = originalColor;
         }
     }
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.CompareTag("Player") && canDamage) {
+            SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
+            Color originalPlayerColor = playerRend.color;
+            StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
             playerHealth.TakeDamage(5);
             damageTimer = 60;
             canDamage = false;
+            
         }
 
         if(other.transform.CompareTag("Bullet")) {
+            Rigidbody2D bulletRB = other.transform.GetComponent<Rigidbody2D>();
+            // Vector3 bulletVelocity = bulletRB.velocity;
+            // rb.AddForce(bulletVelocity * 0.1, ForceMode2D.Force);
+            StartCoroutine(ChangeColor(rend, originalColor));
             hit_sfx.Play();
             enemyHealth.TakeDamage(1);
             if (enemyHealth.isDead()) {
@@ -55,6 +73,11 @@ public class EnemyCollide : MonoBehaviour
             }
             Destroy(other.transform.gameObject);
         }
-
+    }
+    private IEnumerator ChangeColor(SpriteRenderer renderer, Color original)
+    {
+        renderer.color = hitColor;
+        yield return new WaitForSeconds(0.3f);
+        renderer.color = original;
     }
 }
