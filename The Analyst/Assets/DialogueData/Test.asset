@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - I want to kill myself
-  - Now. Goodbye
+  - I wish there was another way...
+  - Everything is okay.
   responses:
   - responseText: Yes
     dialogueObject: {fileID: 11400000, guid: 16b577b83aaf0412cbb66910c5e8cb39, type: 2}
