@@ -908,6 +908,7 @@ GameObject:
   - component: {fileID: 71153580}
   - component: {fileID: 71153579}
   - component: {fileID: 71153583}
+  - component: {fileID: 71153584}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -998,6 +999,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 1
+--- !u!114 &71153584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71153578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &71289393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,12 +1102,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6191015667657448391, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
   m_PrefabInstance: {fileID: 6191015667413869693}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 93352576}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d00e057c6cc043e79dd25da4809886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &93352576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6191015667657448388, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
+  m_PrefabInstance: {fileID: 6191015667413869693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &94230235
 GameObject:
   m_ObjectHideFlags: 0
@@ -11975,7 +12014,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 740}
+  m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -13652,7 +13691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phase2: 0
   breath_meter: {fileID: 2143581230}
-  player: {fileID: 0}
+  player: {fileID: 93352576}
   bubble_cap: 3
   curr_bubbles: 0
 --- !u!4 &1626601436
@@ -123202,7 +123241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ae86f6d65bd4ba1a67a3ce7ff34dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 92150114}
   fillImage: {fileID: 1699021560}
 --- !u!114 &1941649954
 MonoBehaviour:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCollide : MonoBehaviour
 {
-    public Health playerHealth;
+    private Health playerHealth;
     private Health enemyHealth;
     private bool canDamage;
     private int damageTimer;

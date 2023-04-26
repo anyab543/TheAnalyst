@@ -30,11 +30,16 @@ public class TransitionHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (pullCam) {
             camY -= 0.6f;
             mainCam.transform.position = new Vector3 (22, camY, -10);
+            
+            //#if UNITY_STANDALONE
+            if (player.transform.position == null) {
+                Debug.Log("UH OH");
+            }
             player.transform.position = new Vector3 (22, camY, 0);
 
             if (camY <= -350) {
