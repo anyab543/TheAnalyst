@@ -10,6 +10,7 @@ public class EnemyCollide : MonoBehaviour
     private int damageTimer;
     private AudioSource hit_sfx;
     private Color originalColor;
+    private Color originalPlayerColor;
     private SpriteRenderer rend;
     private Color hitColor;
 
@@ -20,6 +21,7 @@ public class EnemyCollide : MonoBehaviour
     void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        originalPlayerColor = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
         canDamage = true;
         damageTimer = 0;
         if (this.transform.CompareTag("WaterLevelGhost")) {
@@ -48,7 +50,6 @@ public class EnemyCollide : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.CompareTag("Player") && canDamage) {
             SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
-            Color originalPlayerColor = playerRend.color;
             StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
             playerHealth.TakeDamage(5);
             damageTimer = 60;
