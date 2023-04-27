@@ -28,20 +28,12 @@ public class DreamerWaterReveal : MonoBehaviour
         sound_played = false;
     }
     
-    private void Awake()
-    {
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-        // disappearTimerMax = 1f;
-        // disappearTimerCurr = 0f;
-        // color = new Color(0.3f, 0.3f, 1, 1f);
-    }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //Debug.Log(mainCam.transform.position.y);
+        
         if (mainCam.transform.position.y <= -267) {
-
             if (timer <= 5) {
                 timer += Time.deltaTime;
             } 

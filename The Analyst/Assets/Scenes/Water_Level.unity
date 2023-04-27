@@ -907,7 +907,6 @@ GameObject:
   - component: {fileID: 71153581}
   - component: {fileID: 71153580}
   - component: {fileID: 71153579}
-  - component: {fileID: 71153583}
   - component: {fileID: 71153584}
   m_Layer: 0
   m_Name: Main Camera
@@ -986,19 +985,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &71153583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71153578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de94c61de8fc4cde8ca57893b173db7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMoving: 1
 --- !u!114 &71153584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2035,7 +2021,7 @@ GameObject:
   - component: {fileID: 208525208}
   m_Layer: 0
   m_Name: Dreamer
-  m_TagString: Hidden
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11733,7 +11719,7 @@ GameObject:
   - component: {fileID: 1298059151}
   m_Layer: 0
   m_Name: Analyst Character Design
-  m_TagString: Dreamer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
