@@ -14,7 +14,7 @@ public class RL_Pulse : MonoBehaviour
     public AudioClip hit_sound;
     private AudioSource audioS;
 
-    private int maxE = 0;
+    //private int maxE = 0;
 
     void Start() {
         pulseIsActive = false;

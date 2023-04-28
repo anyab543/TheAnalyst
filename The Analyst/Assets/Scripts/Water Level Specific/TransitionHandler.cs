@@ -23,18 +23,26 @@ public class TransitionHandler : MonoBehaviour
         pullCam = false;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         player = GameObject.FindGameObjectWithTag("Player");
-        camY = -267f;
-
+        //camY = -267f;
+        camY = 5f;
         boom = GetComponent<AudioSource>();
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
+        if (!phase2) {
+            phase1Move();
+        }
+        
         if (pullCam) {
             camY -= 0.6f;
             mainCam.transform.position = new Vector3 (22, camY, -10);
+            
+            //#if UNITY_STANDALONE
+            if (player.transform.position == null) {
+                Debug.Log("UH OH");
+            }
             player.transform.position = new Vector3 (22, camY, 0);
 
             if (camY <= -350) {
@@ -54,4 +62,16 @@ public class TransitionHandler : MonoBehaviour
     public void pop() {
         curr_bubbles--;
     }
+
+    private void phase1Move() {
+        if (mainCam.transform.position.y > -267) {
+            camY = camY - 0.057f;
+            //camY = camY - 0.5f;
+
+            mainCam.transform.position = new Vector3 (22, camY, -10);
+        } else {
+            
+        }
+    }
 }
+

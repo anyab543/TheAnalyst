@@ -12,6 +12,7 @@ TagManager:
   - breathMeter
   - TransitionHandler
   - WaterLevelGhost
+  - GameHandler
   layers:
   - Default
   - TransparentFX

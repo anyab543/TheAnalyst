@@ -6,21 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3fdc2a3945e454444b1299e4d50c182f
+  - enabled: 1
     path: Assets/Scenes/DemoRoom.unity
     guid: a05700ca853334bdab292182638f1c3c
-  - enabled: 0
-    path: Assets/Scenes/PlayerTogether.unity
-    guid: e9f6ed1928a3d4226a72223cec9ca847
-  - enabled: 0
-    path: Assets/Scenes/MouseShoot.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/HealthBar.unity
-    guid: 3dbda97764bf04d3ab0fe4130556ba3a
-  - enabled: 0
-    path: Assets/Scenes/6thSenseTest.unity
-    guid: 1db616940bbfe4f4298c9ee98c7400fb
   - enabled: 1
     path: Assets/Scenes/Water_Level.unity
     guid: d05b7c8c6d6cc48708c50e131a34d8d4
+  - enabled: 1
+    path: Assets/Scenes/RunningLevel.unity
+    guid: 500d0f6c4ca1d4024b57f2735e839ecc
+  - enabled: 1
+    path: Assets/Scenes/EndLose.unity
+    guid: 885122874a9c545d8bb9e103c955857a
+  - enabled: 1
+    path: Assets/Scenes/EndWin.unity
+    guid: 55c454637ff77450ca00acd42bc79ca3
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 3c6d352c982fc4c31a880f3dd6177ab8
   m_configObjects: {}

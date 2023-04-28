@@ -24,6 +24,7 @@ public class BreathMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerHealth = GameObject.FindWithTag("GameHandler").GetComponent<Health>();
         slider.maxValue = 100;
         slider.value = 100;
         timer_curr = 100;

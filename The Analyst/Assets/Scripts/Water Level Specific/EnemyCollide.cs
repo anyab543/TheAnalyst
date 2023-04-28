@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EnemyCollide : MonoBehaviour
 {
-    public Health playerHealth;
+    private Health playerHealth;
     private Health enemyHealth;
     private bool canDamage;
     private int damageTimer;
     private AudioSource hit_sfx;
     private Color originalColor;
+    private Color originalPlayerColor;
     private SpriteRenderer rend;
     private Color hitColor;
 
@@ -19,7 +20,8 @@ public class EnemyCollide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        playerHealth = GameObject.FindWithTag("GameHandler").GetComponent<Health>();
+        originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
         canDamage = true;
         damageTimer = 0;
         if (this.transform.CompareTag("WaterLevelGhost")) {
@@ -30,9 +32,9 @@ public class EnemyCollide : MonoBehaviour
         rend = gameObject.GetComponentInChildren<SpriteRenderer>();
         // rb = gameObject.GetComponent<Rigidbody2D>();
         originalColor = rend.color;
-
+        Debug.Log("" + originalColor);
         hitColor = Color.red;
-
+        Debug.Log("" + hitColor);
         hit_sfx = GetComponent<AudioSource>();
     }
 
@@ -48,7 +50,6 @@ public class EnemyCollide : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.CompareTag("Player") && canDamage) {
             SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
-            Color originalPlayerColor = playerRend.color;
             StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
             playerHealth.TakeDamage(5);
             damageTimer = 60;

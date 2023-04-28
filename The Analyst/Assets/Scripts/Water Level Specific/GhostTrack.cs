@@ -16,7 +16,7 @@ public class GhostTrack : MonoBehaviour
     private bool sound_played;
 
     public float speed;
-    private Transform target;
+    private GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -31,18 +31,18 @@ public class GhostTrack : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
 
         if (GameObject.FindGameObjectWithTag ("Player") != null) {
-			target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
+			target = GameObject.FindGameObjectWithTag ("Player");//GetComponent<Transform> ();
 		}
     }
 
 
     void FixedUpdate() {
         if (target != null){
-			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+			transform.position = Vector2.MoveTowards (transform.position, target.transform.position, speed * Time.deltaTime);
 			
 		}
 
-        if((target.position - transform.position).magnitude < 5) {
+        if((target.transform.position - transform.position).magnitude < 5) {
             this.transform.GetChild(0).gameObject.SetActive(true);
             if (!sound_played) {
                 appear.Play();

@@ -31,4 +31,11 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.tag != "Player" && other.gameObject.tag != "Enemy" && other.gameObject.tag != "WaterLevelGhost" && other.gameObject.tag != "Hidden"){
+            Destroy(gameObject);
+        }
+    }
+    
 }

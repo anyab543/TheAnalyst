@@ -11,12 +11,14 @@ public class FishTrack : MonoBehaviour
     private float currentY;
     private float distanceFromCamera;
     private bool inRange;
+    private bool flip;
 
     private Rigidbody2D rb;
     
 
-    public float speed;
+    private float speed;
     private Transform target;
+    private float rotation_offset;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,9 @@ public class FishTrack : MonoBehaviour
         if (GameObject.FindGameObjectWithTag ("Player") != null) {
 			target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
 		}
+        flip = false;
+        rotation_offset = 180f;
+        speed = 3.5f;
     }
 
     // Update is called once per frame
@@ -48,10 +53,36 @@ public class FishTrack : MonoBehaviour
     void FixedUpdate() {
         if (target != null && inRange){
 			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-			Vector2 lookDir = target.position - transform.position;
 			
-            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 180f;
+
+
+            // if (target.position.x > transform.position.x) {
+            //     flip = true;
+            // } else {
+            //     flip = false;
+            // }
+
+            if (!flip & target.position.x > transform.position.x) {
+                Vector3 newScale =transform.localScale;
+                newScale.x = -1.0f;
+                transform.localScale = newScale;
+                flip = true;
+                rotation_offset = 0f;
+            } else if (flip & target.position.x < transform.position.x) {
+                Vector3 newScale =transform.localScale;
+                newScale.x = 1.0f;
+                transform.localScale = newScale;
+                flip = false;
+                rotation_offset = 180f;
+            }
+
+
+            Vector2 lookDir = target.position - transform.position;
+			
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + rotation_offset;
 			rb.rotation = angle;
 		}
+
+    
     }
 }
