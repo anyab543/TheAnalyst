@@ -125049,6 +125049,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3082891281806200247, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191015667628402873, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6191015667657448381, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -125108,6 +125116,10 @@ PrefabInstance:
     - target: {fileID: 6191015667657448391, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
       propertyPath: maxHealth
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191015668011737390, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6191015668015607657, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
