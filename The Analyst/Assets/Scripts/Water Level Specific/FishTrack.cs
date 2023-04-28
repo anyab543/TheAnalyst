@@ -16,7 +16,7 @@ public class FishTrack : MonoBehaviour
     private Rigidbody2D rb;
     
 
-    public float speed;
+    private float speed;
     private Transform target;
     private float rotation_offset;
 
@@ -37,6 +37,7 @@ public class FishTrack : MonoBehaviour
 		}
         flip = false;
         rotation_offset = 180f;
+        speed = 3.5f;
     }
 
     // Update is called once per frame

@@ -13,7 +13,7 @@ public class ResponseHandler : MonoBehaviour
 
     public void ShowResponses(Response[] responses)
     {
-        float responseBoxHeight = 0;
+        //float responseBoxHeight = 0;
 
         foreach (Response response in responses)
         {
