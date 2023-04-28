@@ -32,9 +32,9 @@ public class EnemyCollide : MonoBehaviour
         rend = gameObject.GetComponentInChildren<SpriteRenderer>();
         // rb = gameObject.GetComponent<Rigidbody2D>();
         originalColor = rend.color;
-
+        Debug.Log("" + originalColor);
         hitColor = Color.red;
-
+        Debug.Log("" + hitColor);
         hit_sfx = GetComponent<AudioSource>();
     }
 
