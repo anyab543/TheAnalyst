@@ -20,7 +20,7 @@ public class FillStatusBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        playerHealth = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<Health>();
         slider = GetComponent<Slider>();
     }
 

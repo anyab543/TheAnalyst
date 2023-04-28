@@ -20,8 +20,8 @@ public class EnemyCollide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        originalPlayerColor = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
+        playerHealth = GameObject.FindWithTag("GameHandler").GetComponent<Health>();
+        originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
         canDamage = true;
         damageTimer = 0;
         if (this.transform.CompareTag("WaterLevelGhost")) {
