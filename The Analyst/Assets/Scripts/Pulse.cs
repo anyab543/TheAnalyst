@@ -25,7 +25,7 @@ public class Pulse : MonoBehaviour
         rangeMax = 45f;
         alreadyPinged = new List<Collider2D>();
         audioS = GetComponent<AudioSource>();
-        gHandler = GameObject.FindWithTag("GameHandler").GetComponent<PulseCoolDown>();
+        gHandler = GameObject.FindWithTag("cooldownHandler").GetComponent<PulseCoolDown>();
 
     }
 

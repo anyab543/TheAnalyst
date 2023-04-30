@@ -13,6 +13,7 @@ TagManager:
   - TransitionHandler
   - WaterLevelGhost
   - GameHandler
+  - cooldownHandler
   layers:
   - Default
   - TransparentFX
