@@ -14,6 +14,8 @@ public class Pulse : MonoBehaviour
     public AudioClip hit_sound;
     private AudioSource audioS;
 
+    private PulseCoolDown gHandler;
+
     void Start() {
         pulseIsActive = false;
     }
@@ -23,14 +25,21 @@ public class Pulse : MonoBehaviour
         rangeMax = 45f;
         alreadyPinged = new List<Collider2D>();
         audioS = GetComponent<AudioSource>();
+        gHandler = GameObject.FindWithTag("GameHandler").GetComponent<PulseCoolDown>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.E)) {
+        if (gHandler == null) {
+            Debug.Log("OOPS");
+        }
+        
+        if(Input.GetKey(KeyCode.E) & (gHandler.pulse_charges > 0)) {
             if (pulseIsActive == false) {
                 audioS.PlayOneShot(activate_sound);
+                gHandler.pulse_charges--;
             }
             pulseIsActive = true;
         }
