@@ -1,40 +1,3 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-
-// public class RL_PlayerMovement : MonoBehaviour
-// {
-//     public float speed;
-//     private Rigidbody2D myRigidbody;
-//     private Vector3 change;
-    
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-//         myRigidbody = GetComponent<Rigidbody2D>();
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         change = Vector3.zero;
-//         change.x = Input.GetAxisRaw("Horizontal");
-//         change.y = Input.GetAxisRaw("Vertical");
-
-//         if (change != Vector3.zero)
-//         {
-//             MoveCharacter();
-//         }
-//     }
-
-//     void MoveCharacter()
-//     {
-//         myRigidbody.MovePosition(transform.position + change.normalized * speed * Time.deltaTime); 
-//     }
-// }
-
-
-
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
@@ -42,13 +5,12 @@ using UnityEngine;
 public class RL_PlayerMovement : MonoBehaviour { 
 
       public Rigidbody2D rb2D;
-      private bool FaceRight = true; // determine which way player is facing. 
+      private bool FaceRight = false; // determine which way player is facing. 
       public static float runSpeed = 10f; 
       public float startSpeed = 10f;
       public bool isAlive = true; 
       //public AudioSource WalkSFX;
       private Vector3 hMove; 
-      private Vector3 vMove;
       private bool isSwimming = false;
       public float swimSpeed = 5f;
       public float swimGravity = 1f;
@@ -57,10 +19,12 @@ public class RL_PlayerMovement : MonoBehaviour {
       public Animator animator;
       public float originalDrag;
       public float originalAngularDrag;
+      private Transform playerArt;
 
       void Start(){
            animator = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+           playerArt = transform.Find("PlayerArt");
       }
 
       void OnTriggerEnter2D(Collider2D other)
@@ -90,28 +54,26 @@ public class RL_PlayerMovement : MonoBehaviour {
       }
 
       void Update(){
-            //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1 
-           hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
-           vMove = new Vector3(0.0f, Input.GetAxis("Vertical"), 0.0f);
-           if (isAlive == true && !isSwimming) {
-                  transform.position = transform.position + (hMove + vMove) * runSpeed * Time.deltaTime;
+             //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1
+            //NOTE: Vertical axis: [w] / up arrow, [s] / down arrow
+            Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+           if (isAlive == true){
+                  transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
 
-                  if (Input.GetAxis("Horizontal") != 0){ 
-                        animator.SetBool ("isWalking", true); 
-                  //       if (!WalkSFX.isPlaying){ 
-                  //             WalkSFX.Play(); 
-                  //      } 
-                  } 
-                  else { 
-                        animator.SetBool ("isWalking", false); 
-                  //      animator.SetBool ("Walk", false); 
-                  //      WalkSFX.Stop(); 
-                  } 
+                  if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0)){
+                       animator.SetBool ("isWalking", true); 
+                  //     if (!WalkSFX.isPlaying){
+                  //           WalkSFX.Play();
+                  //     }
+                  } else {
+                       animator.SetBool ("isWalking", false);
+                  //     WalkSFX.Stop();
+                 }
 
-                  // Turning: Reverse if input is moving the Player right and Player faces left 
-                 if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
-
-                  } 
+                  // Turning. Reverse if input is moving the Player right and Player faces left.
+                 if ((hvMove.x <0 && !FaceRight) || (hvMove.x >0 && FaceRight)){
+                        playerTurn();
+                  }
             }
 
             else if (isSwimming && isAlive)
@@ -124,6 +86,10 @@ public class RL_PlayerMovement : MonoBehaviour {
                   Vector2 movement = new Vector2(moveHorizontal, moveVertical);
                   rb2D.velocity = movement * swimSpeed;
             }
+
+            if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
+                  playerTurn();
+            } 
       } 
 
       void FixedUpdate(){
@@ -139,9 +105,9 @@ public class RL_PlayerMovement : MonoBehaviour {
             FaceRight = !FaceRight;
 
             // NOTE: Multiply player's x local scale by -1.
-            Vector3 theScale = transform.localScale;
+            Vector3 theScale = playerArt.localScale;
             theScale.x *= -1;
-            transform.localScale = theScale;
+            playerArt.localScale = theScale;
       }
 
 }
