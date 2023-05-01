@@ -15,6 +15,8 @@ public class GameHandler : MonoBehaviour {
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
 
+
+
         void Awake(){
                 SetLevel (volumeLevel);
                 GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
