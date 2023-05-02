@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6191015667657448385, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6191015667657448388, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
       propertyPath: m_Name
       value: Player
@@ -442,6 +446,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1200853206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6191015667657448388, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
+  m_PrefabInstance: {fileID: 299452151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200853213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200853206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38ca0f7fe9ff1d42b96d659c414732b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2D: {fileID: 0}
+  startSpeed: 10
+  isAlive: 1
+  spaceSpeed: 5
+  spaceGravity: 0
+  spaceDrag: 2
+  spaceAngularDrag: 1
+  animator: {fileID: 0}
+  originalDrag: 0
+  originalAngularDrag: 0
 --- !u!1 &1512144894
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +485,7 @@ GameObject:
   - component: {fileID: 1512144896}
   - component: {fileID: 1512144895}
   - component: {fileID: 1512144898}
+  - component: {fileID: 1512144899}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -560,6 +592,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1512144899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512144894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0125f56aa4df48b99e480eaefb40806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  camSpeed: 4
 --- !u!1001 &2010007699
 PrefabInstance:
   m_ObjectHideFlags: 0
