@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (31)
@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (63)
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (19)
@@ -532,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (83)
@@ -602,7 +602,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (76)
@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (6)
@@ -742,7 +742,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (46)
@@ -768,7 +768,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1007,17 +1007,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc166d9a346a14b76870b6c091bfd336, type: 3}
---- !u!114 &92150114 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6191015667657448391, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
-  m_PrefabInstance: {fileID: 6191015667413869693}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93352576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d00e057c6cc043e79dd25da4809886b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &93352576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6191015667657448388, guid: 3d7331ea7b13a4623959249ed7e02c66, type: 3}
@@ -1161,7 +1150,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (28)
@@ -1394,7 +1383,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (70)
@@ -1548,7 +1537,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (68)
@@ -1618,7 +1607,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (84)
@@ -1767,7 +1756,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (57)
@@ -2535,7 +2524,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (40)
@@ -2601,7 +2590,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (5)
@@ -2792,7 +2781,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (32)
@@ -2857,7 +2846,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (21)
@@ -3072,7 +3061,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (74)
@@ -3177,7 +3166,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3835,7 +3824,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (37)
@@ -3900,7 +3889,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (66)
@@ -4234,7 +4223,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (20)
@@ -4295,7 +4284,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (50)
@@ -4370,7 +4359,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (87)
@@ -4608,7 +4597,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (43)
@@ -4758,7 +4747,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (13)
@@ -4823,7 +4812,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (27)
@@ -6849,7 +6838,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (35)
@@ -6998,7 +6987,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (81)
@@ -7402,7 +7391,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (78)
@@ -7636,7 +7625,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (45)
@@ -7786,7 +7775,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (72)
@@ -8010,7 +7999,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (52)
@@ -8080,7 +8069,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (17)
@@ -8408,7 +8397,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (82)
@@ -8553,7 +8542,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (25)
@@ -8619,7 +8608,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (55)
@@ -8694,7 +8683,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (41)
@@ -8844,7 +8833,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (85)
@@ -8862,6 +8851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1080841952151873631, guid: d9552430edced492ca3b81916b7de561, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3649033895149330850, guid: d9552430edced492ca3b81916b7de561, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8937,6 +8930,10 @@ PrefabInstance:
     - target: {fileID: 3649033896070462027, guid: d9552430edced492ca3b81916b7de561, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370158346469254813, guid: d9552430edced492ca3b81916b7de561, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9552430edced492ca3b81916b7de561, type: 3}
@@ -9110,7 +9107,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (2)
@@ -9181,7 +9178,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (58)
@@ -9340,7 +9337,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (64)
@@ -9658,7 +9655,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (14)
@@ -9936,7 +9933,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10177,7 +10174,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (75)
@@ -10247,7 +10244,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (16)
@@ -10308,7 +10305,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (47)
@@ -10334,7 +10331,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -10435,7 +10432,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (44)
@@ -10639,7 +10636,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (53)
@@ -10709,7 +10706,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (49)
@@ -10775,7 +10772,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (51)
@@ -10845,7 +10842,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (34)
@@ -11154,7 +11151,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -11320,7 +11317,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (38)
@@ -11567,7 +11564,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (22)
@@ -11638,7 +11635,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (71)
@@ -12244,7 +12241,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (61)
@@ -12501,7 +12498,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (26)
@@ -12562,7 +12559,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (18)
@@ -12777,7 +12774,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (3)
@@ -12838,7 +12835,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (65)
@@ -12908,7 +12905,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (56)
@@ -12978,7 +12975,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (67)
@@ -13199,7 +13196,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (79)
@@ -13349,7 +13346,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (89)
@@ -13498,7 +13495,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (59)
@@ -13573,7 +13570,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (39)
@@ -121474,7 +121471,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (8)
@@ -121712,7 +121709,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (48)
@@ -121778,7 +121775,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (10)
@@ -121843,7 +121840,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (9)
@@ -121978,7 +121975,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (92)
@@ -122089,7 +122086,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -122311,7 +122308,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (11)
@@ -122376,7 +122373,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (15)
@@ -122442,7 +122439,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (90)
@@ -122507,7 +122504,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (30)
@@ -122572,7 +122569,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (60)
@@ -122774,7 +122771,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (54)
@@ -122933,7 +122930,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (62)
@@ -123008,7 +123005,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (69)
@@ -123078,7 +123075,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (1)
@@ -123223,7 +123220,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (42)
@@ -123289,7 +123286,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish (12)
@@ -123768,7 +123765,7 @@ MonoBehaviour:
   slider: {fileID: 2143581231}
   timer_curr: 0
   black_screen: {fileID: 2083151948}
-  playerHealth: {fileID: 92150114}
+  playerHealth: {fileID: 0}
 --- !u!114 &2143581231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124103,7 +124100,7 @@ PrefabInstance:
     - target: {fileID: 7247847001881509636, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 7247847001881509638, guid: efb867c754d304fb0a7051e440993ccf, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -124209,7 +124206,7 @@ PrefabInstance:
     - target: {fileID: 5349872233897922707, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 92150114}
+      objectReference: {fileID: 0}
     - target: {fileID: 5349872233897922708, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
       propertyPath: m_Name
       value: StraightMovingFish

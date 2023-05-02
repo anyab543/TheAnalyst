@@ -427,6 +427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4590656051995451297, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8730289523087419449, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
       propertyPath: m_Name
       value: GameHandler
