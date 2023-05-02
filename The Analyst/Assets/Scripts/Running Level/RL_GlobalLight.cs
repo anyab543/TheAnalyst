@@ -8,7 +8,7 @@ public class RL_GlobalLight : MonoBehaviour{
  
     void Start(){
         myGlobalLight = gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
-        myGlobalLight.intensity = 0.05f;
+        myGlobalLight.intensity = 0.07f;
     }
 
     void Update(){
@@ -20,7 +20,7 @@ public class RL_GlobalLight : MonoBehaviour{
 
     IEnumerator LightsDown(){
         yield return new WaitForSeconds(0.5f);
-        for (float i=1f; i>0.05f; i -= 0.01f){
+        for (float i=1f; i>0.07f; i -= 0.0001f){
             myGlobalLight.intensity = i;
         }
         myGlobalLight.intensity = 0f;
