@@ -24,7 +24,7 @@ public class TransitionHandler : MonoBehaviour
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         player = GameObject.FindGameObjectWithTag("Player");
         //camY = -267f;
-        camY = 5f;
+        camY = 0f;
         boom = GetComponent<AudioSource>();
 
     }

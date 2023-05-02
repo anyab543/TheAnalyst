@@ -33,7 +33,7 @@ public class BreathMeter : MonoBehaviour
         shade_amount = 0;
         audioS = GetComponent<AudioSource>();
         back_fill = GetComponent<Image>();
-        bubble_value = 15f;
+        bubble_value = 27f;
 
         frames = 0;
     }
@@ -53,7 +53,7 @@ public class BreathMeter : MonoBehaviour
     {
         
         if (timer_curr > 0) {
-            timer_curr -= Time.deltaTime * 2;
+            timer_curr -= Time.deltaTime * 3.5f;
         } else {
             timer_curr = 0;
         }
