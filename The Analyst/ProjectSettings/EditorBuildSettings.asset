@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoRoom.unity
     guid: a05700ca853334bdab292182638f1c3c
   - enabled: 1
+    path: Assets/Scenes/Dialogue.unity
+    guid: c59ed9b8c04a841ce9d0bfc135659ed7
+  - enabled: 1
     path: Assets/Scenes/Water_Level.unity
     guid: d05b7c8c6d6cc48708c50e131a34d8d4
   - enabled: 1
