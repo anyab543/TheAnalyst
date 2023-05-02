@@ -20,8 +20,9 @@ public class RL_GlobalLight : MonoBehaviour{
 
     IEnumerator LightsDown(){
         yield return new WaitForSeconds(0.5f);
-        for (float i=1f; i>0.07f; i -= 0.0001f){
+        for (float i=1f; i>0.07f; i -= 0.1f){
             myGlobalLight.intensity = i;
+            yield return new WaitForSeconds(0.05f);
         }
         myGlobalLight.intensity = 0f;
     }
