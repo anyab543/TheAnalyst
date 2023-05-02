@@ -371,9 +371,9 @@ GameObject:
   - component: {fileID: 7247847001881509639}
   - component: {fileID: 7247847001881509636}
   - component: {fileID: 7247847001881509637}
-  - component: {fileID: 7247847001881509661}
   - component: {fileID: 2766165861659377746}
   - component: {fileID: 5017378749494799516}
+  - component: {fileID: -2232589686029846809}
   m_Layer: 0
   m_Name: RL_Tracking_Ghost
   m_TagString: Enemy
@@ -473,18 +473,6 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   isPlayer: 0
---- !u!114 &7247847001881509661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7247847001881509635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f9731af7fb074232978bb3fa1ba1e91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &2766165861659377746
 AudioSource:
   m_ObjectHideFlags: 0
@@ -597,3 +585,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-2232589686029846809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247847001881509635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13a04ec618d34ab2b8a1d65c3655427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

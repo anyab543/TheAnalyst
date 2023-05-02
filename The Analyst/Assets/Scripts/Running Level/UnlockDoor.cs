@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UnlockDoor : MonoBehaviour{
 
-      public string NextLevel = "Water_Level";
+      public string NextLevel = "EndWin";
 
       public void OnTriggerEnter2D(Collider2D other){
             if (other.gameObject.tag == "Player"){

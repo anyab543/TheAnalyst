@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This moves the skeleton horizaontally only
+
 public class RL_SkeletonMove : MonoBehaviour
 {
     private Vector2 currentLocation;
