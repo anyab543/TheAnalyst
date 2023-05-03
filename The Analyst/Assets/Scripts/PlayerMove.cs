@@ -21,8 +21,11 @@ public class PlayerMove : MonoBehaviour {
       public float originalAngularDrag;
       private Transform playerArt;
 
+      private AudioSource swimSound;
+
       void Start(){
            animator = gameObject.GetComponentInChildren<Animator>();
+           swimSound = gameObject.GetComponent<AudioSource>();
            rb2D = transform.GetComponent<Rigidbody2D>();
            playerArt = transform.Find("PlayerArt");
       }
@@ -87,6 +90,7 @@ public class PlayerMove : MonoBehaviour {
             }
 
             if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
+                  swimSound.Play();
                   playerTurn();
             } 
       } 

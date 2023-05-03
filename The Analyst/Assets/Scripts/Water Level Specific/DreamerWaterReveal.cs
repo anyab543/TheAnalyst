@@ -10,7 +10,7 @@ public class DreamerWaterReveal : MonoBehaviour
     private Color color;
     private float timer;
 
-    private GameObject parent;
+    private GameObject ob;
     private Camera mainCam;  
     public TransitionHandler handler;
 
@@ -23,8 +23,8 @@ public class DreamerWaterReveal : MonoBehaviour
         //this.SetActive(false);
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         timer = 0;
-        parent = this.transform.parent.gameObject;
-        jumpscare = parent.GetComponent<AudioSource>();
+        ob = gameObject;
+        jumpscare = ob.GetComponent<AudioSource>();
         sound_played = false;
     }
     
@@ -42,7 +42,7 @@ public class DreamerWaterReveal : MonoBehaviour
                     jumpscare.Play();
                     sound_played = true;
                 }
-                parent.transform.position = new Vector3 (25, (float)(parent.transform.position.y - 0.5), 0);
+                ob.transform.position = new Vector3 (25, (float)(ob.transform.position.y - 0.5), 0);
                 
             }  
 
