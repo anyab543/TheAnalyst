@@ -33,7 +33,7 @@ public class BulletScript : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other){
-        if (other.gameObject.tag != "Player" && other.gameObject.tag != "Enemy" && other.gameObject.tag != "WaterLevelGhost" && other.gameObject.tag != "Hidden"){
+        if (other.gameObject.tag != "Player" && other.gameObject.tag != "Enemy" && other.gameObject.tag != "WaterLevelGhost" && other.gameObject.tag != "Hidden" && other.gameObject.layer != 4){
             Destroy(gameObject);
         }
     }

@@ -33,7 +33,7 @@ public class PulseCoolDown : MonoBehaviour
 
         if (timer_on) {
             timer += Time.deltaTime;
-            if (timer >= 5f) {
+            if (timer >= 6f) {
                 timer = 0;
                 timer_on = false;
                 pulse_charges++;
