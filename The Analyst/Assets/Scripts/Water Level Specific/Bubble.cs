@@ -24,7 +24,7 @@ public class Bubble : MonoBehaviour
             breath_meter.found_bubble();
 
             if(handler.phase2) {
-                handler.pop();
+                handler.bubble_pop();
             }
 
             Destroy(parent);

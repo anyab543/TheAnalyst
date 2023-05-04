@@ -47,7 +47,7 @@ public class DreamerWaterReveal : MonoBehaviour
             }  
 
             if (timer >= 4 && !handler.phase2) {
-                handler.Trigger();
+                handler.MyTrigger();
                 gameObject.SetActive(false);
             } 
         }

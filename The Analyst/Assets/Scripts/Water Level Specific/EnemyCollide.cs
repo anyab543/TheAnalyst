@@ -10,9 +10,10 @@ public class EnemyCollide : MonoBehaviour
     private int damageTimer;
     private AudioSource hit_sfx;
     private Color originalColor;
-    //private Color originalPlayerColor;
+    private Color originalPlayerColor;
     private SpriteRenderer rend;
     private Color hitColor;
+    private Color startColor;
 
 
     // private Rigidbody2D rb;
@@ -21,7 +22,7 @@ public class EnemyCollide : MonoBehaviour
     void Start()
     {
         playerHealth = GameObject.FindWithTag("GameHandler").GetComponent<Health>();
-        //originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
+        originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
         canDamage = true;
         damageTimer = 0;
         if (this.transform.CompareTag("WaterLevelGhost")) {
@@ -31,7 +32,9 @@ public class EnemyCollide : MonoBehaviour
         }
         rend = gameObject.GetComponentInChildren<SpriteRenderer>();
         originalColor = rend.color;
-        hitColor = Color.red;
+        // hitColor = Color.red;
+        hitColor = new Color(2.55f, 0.3f, 0.3f, 1f);
+        startColor = new Color (2.55f, 2.55f, 2.55f, 1f);
         hit_sfx = GetComponent<AudioSource>();
     }
 
@@ -46,8 +49,8 @@ public class EnemyCollide : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.CompareTag("Player") && canDamage) {
-            //SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
-            //StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
+            SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
+            StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
             playerHealth.TakeDamage(5);
             damageTimer = 60;
             canDamage = false;
@@ -76,6 +79,6 @@ public class EnemyCollide : MonoBehaviour
     {
         renderer.color = hitColor;
         yield return new WaitForSeconds(0.3f);
-        renderer.color = original;
+        renderer.color = startColor;
     }
 }
