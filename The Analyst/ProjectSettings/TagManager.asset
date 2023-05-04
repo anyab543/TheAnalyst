@@ -14,6 +14,9 @@ TagManager:
   - WaterLevelGhost
   - GameHandler
   - cooldownHandler
+  - boss_HB
+  - Boss
+  - Pulse
   layers:
   - Default
   - TransparentFX

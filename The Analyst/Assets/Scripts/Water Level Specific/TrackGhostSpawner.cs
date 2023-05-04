@@ -18,7 +18,7 @@ public class TrackGhostSpawner : MonoBehaviour {
 	private float distanceFromPlayer;
 	private bool spawnActive = false;
 
-	public TransitionHandler handler;
+	public bossControl bossC;
 
 	void Start (){
 		currentX = transform.position.x;
@@ -31,7 +31,7 @@ public class TrackGhostSpawner : MonoBehaviour {
 		//Debug.Log(distanceFromPlayer);
 		//Debug.Log("hi");
 
-		if (handler.phase2) {
+		if (bossC.boss_p3 | bossC.boss_p4) {
 			spawnActive = true;
 		} 
 		
