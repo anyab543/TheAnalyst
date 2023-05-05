@@ -95,8 +95,8 @@ public class TransitionHandler : MonoBehaviour
 
     private void phase1Move() {
         if (mainCam.transform.position.y > -267) {
-            camY = camY - 0.056f;
-            // camY = camY - 0.5f;
+            // camY = camY - 0.056f;
+            camY = camY - 0.5f;
 
             mainCam.transform.position = new Vector3 (22, camY, -10);
         } else {

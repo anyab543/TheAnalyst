@@ -57,24 +57,8 @@ public class RL_ChaserCollide : MonoBehaviour
             
         }
 
-        if(other.transform.CompareTag("Bullet")) {
-            Rigidbody2D bulletRB = other.transform.GetComponent<Rigidbody2D>();
-            // Vector3 bulletVelocity = bulletRB.velocity;
-            // rb.AddForce(bulletVelocity * 0.1, ForceMode2D.Force);
-            StartCoroutine(ChangeColor(rend, originalColor));
-            hit_sfx.Play();
-            enemyHealth.TakeDamage(1);
-            if (enemyHealth.isDead()) {
-                if (this.transform.CompareTag("WaterLevelGhost")) {
-                    Destroy(transform.parent.gameObject);
-                } else {
-                    Destroy(gameObject);
-                }
-                
-            }
-            Destroy(other.transform.gameObject);
         }
-    }
+        
     private IEnumerator ChangeColor(SpriteRenderer renderer, Color original)
     {
         renderer.color = hitColor;
