@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 3c6d352c982fc4c31a880f3dd6177ab8
+  - enabled: 1
+    path: Assets/Scenes/RL_BossFight.unity
+    guid: 2af983cf1d82a40cabc2131849088042
   m_configObjects: {}
