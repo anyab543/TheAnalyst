@@ -63,7 +63,7 @@ public class RL_ChaserCollide : MonoBehaviour
             // rb.AddForce(bulletVelocity * 0.1, ForceMode2D.Force);
             StartCoroutine(ChangeColor(rend, originalColor));
             hit_sfx.Play();
-            enemyHealth.TakeDamage(1);
+            enemyHealth.TakeDamage(0);
             if (enemyHealth.isDead()) {
                 if (this.transform.CompareTag("WaterLevelGhost")) {
                     Destroy(transform.parent.gameObject);
