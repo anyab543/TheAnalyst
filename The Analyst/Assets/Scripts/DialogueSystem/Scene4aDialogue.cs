@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour
+public class Scene4aDialogue : MonoBehaviour
 {
     public int primeInt = 1;         // This integer drives game progress!
     public Text Char1name;
@@ -66,12 +66,12 @@ public class Scene1Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "…Where… Am I?";
+            Char2speech.text = "…I’m back at my office? It can’t be.";
         }
         else if (primeInt == 3)
         {
             Char1name.text = "Analyst";
-            Char1speech.text = "*Looks around*";
+            Char1speech.text = "I hear crying. I think someone is inside. ";
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -81,19 +81,12 @@ public class Scene1Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "This looks like my office.";
-        }
-        else if (primeInt == 5)
-        {
-            Char1name.text = "Analyst";
-            Char1speech.text = "Let me move to the hallway";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char2speech.text = "*Walks inside the office*";
             nextButton.SetActive(false);
             allowSpace = true;
             NextScene1Button.SetActive(true);
         }
-   
+
         //Please do NOT delete this final bracket that ends the next() function: 
     }
 
@@ -125,7 +118,7 @@ public class Scene1Dialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene2a");
+        SceneManager.LoadScene("Scene5a");
     }
     public void SceneChange2()
     {
