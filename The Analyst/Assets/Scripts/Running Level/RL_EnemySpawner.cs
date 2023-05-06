@@ -149,7 +149,7 @@ public class RL_EnemySpawner : MonoBehaviour
 
     private void boss_teleport() {
         float newx = player.transform.position.x;
-        float newy = Random.Range(-341, -359);
+        float newy = Random.Range(-10, -10);
         while (Mathf.Abs(newx - player.transform.position.x) < 9) {
             newx = Random.Range(4, 40);
         }
