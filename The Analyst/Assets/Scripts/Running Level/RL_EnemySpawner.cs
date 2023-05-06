@@ -149,9 +149,9 @@ public class RL_EnemySpawner : MonoBehaviour
 
     private void boss_teleport() {
         float newx = player.transform.position.x;
-        float newy = Random.Range(-10, -10);
+        float newy = Random.Range(-215, -230);
         while (Mathf.Abs(newx - player.transform.position.x) < 9) {
-            newx = Random.Range(4, 40);
+            newx = Random.Range(140, 180);
         }
         audioS.PlayOneShot(tp_sfx);
         gameObject.transform.position = new Vector3 (newx, newy, 0);
@@ -160,34 +160,34 @@ public class RL_EnemySpawner : MonoBehaviour
 
     private IEnumerator shoot1()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         audioS.PlayOneShot(shoot_sfx);
         Instantiate(skeletonPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(2f);
 
-        audioS.PlayOneShot(shoot_sfx);
-        Instantiate(skeletonPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
+        // audioS.PlayOneShot(shoot_sfx);
+        // Instantiate(skeletonPrefab, transform.position, Quaternion.identity);
+        // yield return new WaitForSeconds(0.3f);
     }
 
     private IEnumerator shoot2()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         audioS.PlayOneShot(shoot_sfx);
         Instantiate(ghostPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
 
-        audioS.PlayOneShot(shoot_sfx);
-        Instantiate(ghostPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
+        // audioS.PlayOneShot(shoot_sfx);
+        // Instantiate(ghostPrefab, transform.position, Quaternion.identity);
+        // yield return new WaitForSeconds(0.3f);
 
-        audioS.PlayOneShot(shoot_sfx);
-        Instantiate(ghostPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
+        // audioS.PlayOneShot(shoot_sfx);
+        // Instantiate(ghostPrefab, transform.position, Quaternion.identity);
+        // yield return new WaitForSeconds(0.3f);
 
 
-        audioS.PlayOneShot(shoot_sfx);
-        Instantiate(ghostPrefab, transform.position, Quaternion.identity);  
+        // audioS.PlayOneShot(shoot_sfx);
+        // Instantiate(ghostPrefab, transform.position, Quaternion.identity);  
     }
 
     private IEnumerator shoot3()
