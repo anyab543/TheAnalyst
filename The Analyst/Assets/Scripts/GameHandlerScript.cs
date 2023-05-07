@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class GameHandler : MonoBehaviour {
+public class GameHandlerScript : MonoBehaviour {
 
         public static int playerStat1;
 
