@@ -37,7 +37,7 @@ public class RL_EnemyTrack : MonoBehaviour
 		}
         flip = false;
         rotation_offset = 180f;
-        speed = 3.5f;
+        speed = 5f;
     }
 
     // Update is called once per frame

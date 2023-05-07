@@ -24,11 +24,11 @@ public class RL_ChaserCollide : MonoBehaviour
         originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
         canDamage = true;
         damageTimer = 0;
-        if (this.transform.CompareTag("WaterLevelGhost")) {
-            enemyHealth = transform.parent.gameObject.GetComponent<Health>();
-        } else {
-            enemyHealth = GetComponent<Health>();
-        }
+        // if (this.transform.CompareTag("WaterLevelGhost")) {
+        //     enemyHealth = transform.parent.gameObject.GetComponent<Health>();
+        // } else {
+        //     enemyHealth = GetComponent<Health>();
+        // }
         rend = gameObject.GetComponentInChildren<SpriteRenderer>();
         // rb = gameObject.GetComponent<Rigidbody2D>();
         originalColor = rend.color;
@@ -49,6 +49,7 @@ public class RL_ChaserCollide : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.CompareTag("Player") && canDamage) {
+            Debug.Log("Enemy Hit");
             SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
             StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
             playerHealth.TakeDamage(15);
