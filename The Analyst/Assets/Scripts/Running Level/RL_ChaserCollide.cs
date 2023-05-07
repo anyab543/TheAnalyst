@@ -49,6 +49,7 @@ public class RL_ChaserCollide : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.CompareTag("Player") && canDamage) {
+            Debug.Log("Enemy Hit");
             SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
             StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
             playerHealth.TakeDamage(15);
