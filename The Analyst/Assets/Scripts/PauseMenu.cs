@@ -68,7 +68,7 @@ public class PauseMenu : MonoBehaviour {
         }
 */
         public void StartGame(){
-                SceneManager.LoadScene("DemoRoom");
+                SceneManager.LoadScene("Scene1");
         }
 
         public void OpenCredits(){
@@ -81,6 +81,7 @@ public class PauseMenu : MonoBehaviour {
                 SceneManager.LoadScene("MainMenu");
                 // Please also reset all static variables here, for new games!
         }
+
 
         public void QuitGame(){
                 #if UNITY_EDITOR
