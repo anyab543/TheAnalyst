@@ -6,15 +6,15 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
-    public GameHandler gameHandlerObj;
+    //public GameHandler gameHandlerObj;
 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        if (GameObject.FindWithTag("GameHandler") != null)
-        {
-            gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-        }
+        // if (GameObject.FindWithTag("GameHandler") != null)
+        // {
+        //     gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandlerScript>();
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D other)

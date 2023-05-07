@@ -14,8 +14,8 @@ public class SpaceMovement : MonoBehaviour {
       //private bool isSwimming = false;
       public float spaceSpeed = 5f;
       public float spaceGravity = 0f;
-      public float spaceDrag = 2f;
-      public float spaceAngularDrag = 1f;
+      // public float spaceDrag = 2f;
+      // public float spaceAngularDrag = 1f;
       public Animator animator;
       public float originalDrag;
       public float originalAngularDrag;
@@ -26,10 +26,10 @@ public class SpaceMovement : MonoBehaviour {
            rb2D = transform.GetComponent<Rigidbody2D>();
            playerArt = transform.Find("PlayerArt");
 
-           originalDrag = rb2D.drag;
-                  originalAngularDrag = rb2D.angularDrag;
-                  rb2D.drag = spaceDrag;
-                  rb2D.angularDrag = spaceAngularDrag;
+      //      originalDrag = rb2D.drag;
+      //             originalAngularDrag = rb2D.angularDrag;
+      //             rb2D.drag = spaceDrag;
+      //             rb2D.angularDrag = spaceAngularDrag;
                   rb2D.gravityScale = spaceGravity;
       }
 
@@ -61,11 +61,24 @@ public class SpaceMovement : MonoBehaviour {
 
       void Update(){
             //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1 
-           hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
-           if (isAlive == true) {
-                  transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
+           //hMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
-                  if (Input.GetAxis("Horizontal") != 0){ 
+           if (isAlive == true) {
+                  //transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
+                  if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(1f, 0f));
+                  }
+                  if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(-1f, 0f));
+                  }
+                  if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(0f, 1f));
+                  }
+                  if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(0f, -1f));
+                  }
+
+                  if (Input.GetAxis("Horizontal") != 0 || (Input.GetAxis("Vertical") != 0)){ 
                         animator.SetBool ("isWalking", true); 
                   //       if (!WalkSFX.isPlaying){ 
                   //             WalkSFX.Play(); 
@@ -81,30 +94,12 @@ public class SpaceMovement : MonoBehaviour {
 
             }
 
-            // else if (isSwimming && isAlive)
-            // {
-            //       // Get input for swimming movement
-            //       float moveHorizontal = Input.GetAxis("Horizontal");
-            //       float moveVertical = Input.GetAxis("Vertical");
-
-            //       // Set the player's velocity based on input
-            //       Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-            //       rb2D.velocity = movement * swimSpeed;
-            // }
-
             if ((hMove.x <0 && !FaceRight) || (hMove.x >0 && FaceRight)) {
                   playerTurn();
             } 
       } 
 
-      void FixedUpdate(){
-            //slow down on hills / stops sliding from velocity
-            if (hMove.x == 0){
-                  rb2D.velocity = new Vector2(rb2D.velocity.x / 1.1f, rb2D.velocity.y) ;
-            }
-      } 
-
-      void playerTurn()
+           void playerTurn()
       {
             // NOTE: Switch player facing label
             FaceRight = !FaceRight;
