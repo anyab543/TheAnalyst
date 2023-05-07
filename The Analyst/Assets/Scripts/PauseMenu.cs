@@ -82,6 +82,7 @@ public class PauseMenu : MonoBehaviour {
                 // Please also reset all static variables here, for new games!
         }
 
+
         public void QuitGame(){
                 #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
