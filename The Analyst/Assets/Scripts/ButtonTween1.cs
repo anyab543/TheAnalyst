@@ -70,7 +70,7 @@ public class ButtonTween1 : MonoBehaviour{
             if (elapsed <= 1f){
                 float newAlpha = curveAlpha.Evaluate(elapsed);
                 thisImage.color = new Color(2.55f, 2.55f, 2.55f, newAlpha);
-                buttonText.GetComponent<TextMeshProUGUI>().color = new Color(2.55f, 2.55f, 2.55f, newAlpha);
+                buttonText.GetComponent<TextMeshProUGUI>().color = new Color(0f, 0f, 0f, newAlpha);
             }
 		    elapsed += Time.deltaTime;
             elapsedMove += (Time.deltaTime/10);
