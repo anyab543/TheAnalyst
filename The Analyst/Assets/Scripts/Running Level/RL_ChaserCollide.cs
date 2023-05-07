@@ -24,11 +24,11 @@ public class RL_ChaserCollide : MonoBehaviour
         originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
         canDamage = true;
         damageTimer = 0;
-        if (this.transform.CompareTag("WaterLevelGhost")) {
-            enemyHealth = transform.parent.gameObject.GetComponent<Health>();
-        } else {
-            enemyHealth = GetComponent<Health>();
-        }
+        // if (this.transform.CompareTag("WaterLevelGhost")) {
+        //     enemyHealth = transform.parent.gameObject.GetComponent<Health>();
+        // } else {
+        //     enemyHealth = GetComponent<Health>();
+        // }
         rend = gameObject.GetComponentInChildren<SpriteRenderer>();
         // rb = gameObject.GetComponent<Rigidbody2D>();
         originalColor = rend.color;
