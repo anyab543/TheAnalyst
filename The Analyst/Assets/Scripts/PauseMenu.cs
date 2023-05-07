@@ -68,7 +68,7 @@ public class PauseMenu : MonoBehaviour {
         }
 */
         public void StartGame(){
-                SceneManager.LoadScene("DemoRoom");
+                SceneManager.LoadScene("Scene1");
         }
 
         public void OpenCredits(){
