@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour {
         public AudioMixer mixer;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
+        public string currentScene;
 
         void Awake (){
                 SetLevel (volumeLevel);
@@ -24,9 +25,10 @@ public class PauseMenu : MonoBehaviour {
                 }
         }
 
-        void Start (){
+        void Start () {
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
+                // currentScene = GameObject.FindWithTag("Player").GetComponent<Health>().currentScene;
         }
 
         void Update (){
@@ -56,7 +58,6 @@ public class PauseMenu : MonoBehaviour {
                 mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
                 volumeLevel = sliderValue;
         }
-
 /*
         public void UpdatePlayerStat(int amount){
                 playerStat += amount;
@@ -73,6 +74,10 @@ public class PauseMenu : MonoBehaviour {
 
         public void OpenCredits(){
                 SceneManager.LoadScene("Credits");
+        }
+
+        public void TryAgain() {
+                SceneManager.LoadScene(currentScene);
         }
 
         public void RestartGame(){
