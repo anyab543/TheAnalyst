@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+    public GameObject gameObject;
     //public GameHandler gameHandlerObj;
 
     private void Start()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FixScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class FixScript : MonoBehaviour
     public GameObject brokenWire;
     public GameObject pressSpace;
     public bool isCurrentlyColliding;
+    private float waitTime = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +28,20 @@ public class FixScript : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKey(KeyCode.Space) && inventory.isFull[0] == true && inventory.isFull[1] == true && isCurrentlyColliding == true) {
-                        fixedWire.gameObject.SetActive(true);
-                        brokenWire.gameObject.SetActive(false); 
-        }   
         if(inventory.isFull[0] == true && inventory.isFull[1] == true) {
             if (isCurrentlyColliding == true) {
                 pressSpace.gameObject.SetActive(true);
             }
         }
+        if (Input.GetKey(KeyCode.Space) && inventory.isFull[0] == true && inventory.isFull[1] == true && isCurrentlyColliding == true) {
+                        fixedWire.gameObject.SetActive(true);
+                        brokenWire.gameObject.SetActive(false);
+                        StartCoroutine(waitWin());
+                        SceneManager.LoadScene("Water_Level");
+        }   
+    }
+
+    IEnumerator waitWin() {
+            yield return new WaitForSeconds(waitTime);
     }
 }
