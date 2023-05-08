@@ -23,6 +23,7 @@ public class TransitionHandler : MonoBehaviour
 
     private GameObject boss;
     private GameObject boss_hb;
+    public GameObject dreamer2;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class TransitionHandler : MonoBehaviour
         boss.SetActive(false);
         boss_hb = GameObject.FindWithTag("boss_HB");
         boss_hb.SetActive(false);
+        dreamer2.SetActive(false);
 
         boss_dead = false;
 
@@ -74,6 +76,8 @@ public class TransitionHandler : MonoBehaviour
             breath_meter.fill_meter();
             phase2_music.SetActive(false);
             Destroy(boss);
+            boss_hb.SetActive(false);
+            dreamer2.SetActive(true);
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Hidden");
             foreach (GameObject obj in gameObjects) {
                 Destroy(obj);
@@ -97,7 +101,7 @@ public class TransitionHandler : MonoBehaviour
         if (mainCam.transform.position.y > -267) {
             camY = camY - 0.056f;
             // camY = camY - 0f;
-            // camY = camY - 0.5f;
+            // camY = camY - 0.7f;
 
             mainCam.transform.position = new Vector3 (22, camY, -10);
         } else {
