@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue.unity
     guid: c59ed9b8c04a841ce9d0bfc135659ed7
   - enabled: 1
-    path: Assets/Scenes/EndLose.unity
+    path: Assets/Scenes/RunningLevelDeath.unity
     guid: 885122874a9c545d8bb9e103c955857a
   - enabled: 1
     path: Assets/Scenes/EndWin.unity
@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RunningLevel.unity
     guid: 500d0f6c4ca1d4024b57f2735e839ecc
+  - enabled: 1
+    path: Assets/Scenes/Water_LevelDeath.unity
+    guid: f9d6f11e15b6a441d9dbb4b26152c1d4
+  - enabled: 1
+    path: Assets/Scenes/SpaceLevelDeath.unity
+    guid: e4ccf2f41eac94465bb26d652432f53a
   m_configObjects: {}

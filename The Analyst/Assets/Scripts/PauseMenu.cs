@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour {
         void Awake (){
                 SetLevel (volumeLevel);
                 GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-                if (sliderTemp != null){
+                if (sliderTemp != null) {
                         sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
                         sliderVolumeCtrl.value = volumeLevel;
                 }
@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour {
         void Start () {
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
-                // currentScene = GameObject.FindWithTag("Player").GetComponent<Health>().currentScene;
+                currentScene = gameObject.GetComponent<Health>().currentScene;
         }
 
         void Update (){

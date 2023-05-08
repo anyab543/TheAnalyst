@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int amount) {
         currentHealth -= amount;
         if ((currentHealth <= 0)&&(isPlayer)) {
-            SceneManager.LoadScene("EndLose");
+            SceneManager.LoadScene(currentScene + "Death");
         }
     }
 
