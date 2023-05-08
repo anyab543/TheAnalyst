@@ -66,7 +66,7 @@ public class Scene6aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "…I'm back?";
+            StartCoroutine(TypeText(Char2speech, "…I'm back?"));
         }
         else if (primeInt == 3)
         {
@@ -81,7 +81,7 @@ public class Scene6aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "I have to find that person.";
+            StartCoroutine(TypeText(Char2speech, "I have to find that person."));
             nextButton.SetActive(false);
             allowSpace = true;
             NextScene1Button.SetActive(true);
@@ -124,5 +124,20 @@ public class Scene6aDialogue : MonoBehaviour
     public void SceneChange2()
     {
         SceneManager.LoadScene("Scene2b");
+    }
+
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }

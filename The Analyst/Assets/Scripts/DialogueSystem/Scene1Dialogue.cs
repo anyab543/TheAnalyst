@@ -66,7 +66,7 @@ public class Scene1Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "…Where… Am I?";
+            StartCoroutine(TypeText(Char2speech, "…Where… Am I? (Press spacebar to continue)"));
         }
         else if (primeInt == 3)
         {
@@ -81,7 +81,7 @@ public class Scene1Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "This looks like my office.";
+            StartCoroutine(TypeText(Char2speech, "This looks like my office."));
         }
         else if (primeInt == 5)
         {
@@ -130,5 +130,19 @@ public class Scene1Dialogue : MonoBehaviour
     public void SceneChange2()
     {
         SceneManager.LoadScene("Scene2b");
+    }
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }

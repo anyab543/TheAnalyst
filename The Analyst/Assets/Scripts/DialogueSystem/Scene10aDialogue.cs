@@ -71,7 +71,7 @@ public class Scene10aDialogue : MonoBehaviour
         else if (primeInt == 3)
         {
             Char1name.text = "???";
-            Char1speech.text = "Don’t you remember me? I’m one of your patients. You’re helping me with my insomnia.";
+            StartCoroutine(TypeText(Char1speech, "Don’t you remember me? I’m one of your patients. You’re helping me with my insomnia."));
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -86,7 +86,7 @@ public class Scene10aDialogue : MonoBehaviour
         else if (primeInt == 5)
         {
             Char1name.text = "???";
-            Char1speech.text = "You remember. I’ve been having the nightmares about being lost in space. You’ve been helping me analyze my dreams.";
+            StartCoroutine(TypeText(Char1speech, "You remember. I’ve been having the nightmares about being lost in space. You’ve been helping me analyze my dreams so I can get better."));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -100,7 +100,7 @@ public class Scene10aDialogue : MonoBehaviour
         else if (primeInt == 7)
         {
             Char1name.text = "???";
-            Char1speech.text = "We can skip today’s session if you want. I’ve just been so stressed lately.";
+            StartCoroutine(TypeText(Char1speech, "We can skip today’s session if you want. I’ve just been so stressed lately."));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -120,7 +120,7 @@ public class Scene10aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "I just feel like I’m dreaming too. Haha.";
+            StartCoroutine(TypeText(Char2speech, "I just feel like I’m dreaming too. Haha."));
         }
         else if (primeInt == 10)
         {
@@ -137,7 +137,7 @@ public class Scene10aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "Haha well its like you say…";
+            StartCoroutine(TypeText(Char2speech, "Haha well its like you say…"));
         }
 
         else if (primeInt == 12)
@@ -145,7 +145,7 @@ public class Scene10aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "The physical and psychical may be closer than what it appears to be.";
+            StartCoroutine(TypeText(Char2speech, "The physical and psychical may be closer than what it appears to be."));
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -164,4 +164,20 @@ public class Scene10aDialogue : MonoBehaviour
     {
         SceneManager.LoadScene("Scene10b");
     }
+
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
+
 }

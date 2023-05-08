@@ -1080,6 +1080,63 @@ MonoBehaviour:
   NextScene1Button: {fileID: 1154636606}
   NextScene2Button: {fileID: 959727665}
   nextButton: {fileID: 2031953108}
+--- !u!1001 &1453438897401985738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 566.33124
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 508.8875
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795390716357136717, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375782383412124295, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
+      propertyPath: m_Name
+      value: Storyline_Music_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a966ceaa1e1c24c69b5fb46846e90ed5, type: 3}
 --- !u!1001 &2187385601679776541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,6 +1231,10 @@ PrefabInstance:
     - target: {fileID: 1697625862458699230, guid: 59d40ca81fbd54f17a5bb9bc3342c951, type: 3}
       propertyPath: m_Name
       value: ButtonSceneChange1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866844039183271130, guid: 59d40ca81fbd54f17a5bb9bc3342c951, type: 3}
+      propertyPath: m_Text
+      value: Head into the hallway (Click Me)
       objectReference: {fileID: 0}
     - target: {fileID: 8023323216469771435, guid: 59d40ca81fbd54f17a5bb9bc3342c951, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

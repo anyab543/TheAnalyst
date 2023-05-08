@@ -66,12 +66,12 @@ public class Scene11bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "You feel yourself sinking.";
+            StartCoroutine(TypeText(Char2speech, "You feel yourself sinking."));
         }
         else if (primeInt == 3)
         {
             Char1name.text = "";
-            Char1speech.text = "The darkness is suffocating and heavy.";
+            StartCoroutine(TypeText(Char1speech, "The darkness is suffocating and heavy."));
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
@@ -80,14 +80,14 @@ public class Scene11bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "This time there is no light.";
+            StartCoroutine(TypeText(Char2speech, "This time there is no light."));
         }
         else if (primeInt == 5)
         {
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "Falling deeper into your mind.";
+            StartCoroutine(TypeText(Char2speech, "Falling deeper into your mind."));
             nextButton.SetActive(false);
             allowSpace = true;
             NextScene1Button.SetActive(true);
@@ -129,5 +129,20 @@ public class Scene11bDialogue : MonoBehaviour
     public void SceneChange2()
     {
         SceneManager.LoadScene("Scene2b");
+    }
+
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }

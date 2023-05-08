@@ -66,12 +66,13 @@ public class Scene11aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "You made it out alive…";
+            StartCoroutine(TypeText(Char2speech, "You made it out alive…"));
         }
         else if (primeInt == 3)
         {
             Char1name.text = "Analyst";
-            Char1speech.text = "Who are you? Please just let me go!";
+            StartCoroutine(TypeText(Char1speech, "Who are you? Please just let me go!"));
+            Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
@@ -80,14 +81,14 @@ public class Scene11aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "I’m afraid I can’t do that.";
+            StartCoroutine(TypeText(Char2speech, "I’m afraid I can’t do that."));
         }
         else if (primeInt == 5)
         {
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "Let's see if you can survive this next nightmare.";
+            StartCoroutine(TypeText(Char2speech, "Let's see if you can survive this next nightmare."));
             nextButton.SetActive(false);
             allowSpace = true;
             NextScene1Button.SetActive(true);
@@ -112,7 +113,7 @@ public class Scene11aDialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "Sure, anything you want... just lay off the club.";
+        StartCoroutine(TypeText(Char1speech, "Sure, anything you want... just lay off the club."));
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 29;
@@ -129,5 +130,22 @@ public class Scene11aDialogue : MonoBehaviour
     public void SceneChange2()
     {
         SceneManager.LoadScene("Scene2b");
+    }
+
+
+
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }

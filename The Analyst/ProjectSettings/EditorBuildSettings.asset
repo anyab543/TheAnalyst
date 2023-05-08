@@ -68,4 +68,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceLevelDeath.unity
     guid: e4ccf2f41eac94465bb26d652432f53a
+  - enabled: 1
+    path: Assets/Scenes/Scene6a.unity
+    guid: ab693488ba49f408482ca7845b2182c5
+  - enabled: 1
+    path: Assets/Scenes/Scene7a.unity
+    guid: 3aa4ef103d12f48cebb0fbbe41f62f56
+  - enabled: 1
+    path: Assets/Scenes/Scene8a.unity
+    guid: fa4f233832acb45ff93fbd75adbeedf7
+  - enabled: 1
+    path: Assets/Scenes/Scene9a.unity
+    guid: 257de498bfe60416da0548d623d853e5
+  - enabled: 1
+    path: Assets/Scenes/Scene10a.unity
+    guid: e950771f898b24f7182d2fe70c92a9e1
+  - enabled: 1
+    path: Assets/Scenes/Scene10b.unity
+    guid: 9f579f4ad52ed4363a1b96fb88b8a292
+  - enabled: 1
+    path: Assets/Scenes/Scene11a.unity
+    guid: 2ef09b5122a594d5cb8905aec074c92d
+  - enabled: 1
+    path: Assets/Scenes/Scene11b.unity
+    guid: d6a5ab580eb504e9e969c78fc3fbc7d7
   m_configObjects: {}

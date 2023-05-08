@@ -66,12 +66,12 @@ public class Scene10bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "Your falling. Deeper into a relaxing sleep.";
+            StartCoroutine(TypeText(Char2speech, "Your falling. Deeper into a relaxing sleep."));
         }
         else if (primeInt == 3)
         {
             Char1name.text = "";
-            Char1speech.text = "The spiral is calling you. The deeper you fall, the more relaxed you become.";
+            StartCoroutine(TypeText(Char1speech, "The spiral is calling you. The deeper you fall, the more relaxed you become."));
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -81,12 +81,12 @@ public class Scene10bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "Fall into the light.";
+            StartCoroutine(TypeText(Char2speech, "Fall into the light."));
         }
         else if (primeInt == 5)
         {
             Char1name.text = "";
-            Char1speech.text = "Reach the other side.";
+            StartCoroutine(TypeText(Char1speech, "Reach the other side."));
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
@@ -130,5 +130,20 @@ public class Scene10bDialogue : MonoBehaviour
     public void SceneChange2()
     {
         SceneManager.LoadScene("Scene2b");
+    }
+
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }

@@ -86,7 +86,7 @@ public class Scene5aDialogue : MonoBehaviour
         else if (primeInt == 5)
         {
             Char1name.text = "???";
-            Char1speech.text = "Doctor? Is that you? Thanks for seeing me today.";
+            StartCoroutine(TypeText(Char1speech, "Doctor? Is that you? Thanks for seeing me today."));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -100,7 +100,7 @@ public class Scene5aDialogue : MonoBehaviour
         else if (primeInt == 7)
         {
             Char1name.text = "???";
-            Char1speech.text = "Well, I’ve been having this reoccurring nightmare.";
+            StartCoroutine(TypeText(Char1speech, "Well, I’ve been having this reoccurring nightmare."));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -120,7 +120,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "I’m in this random hall or street. Everything is dark. The dream always starts with me running and the feeling that something is behind me.";
+            StartCoroutine(TypeText(Char2speech, "I’m in this random hall or street. Everything is dark. The dream always starts with me running and the feeling that something is behind me."));
         }
         else if (primeInt == 10)
         {
@@ -137,7 +137,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "No… but it feels familiar. ";
+            StartCoroutine(TypeText(Char2speech, "No… but it feels familiar. "));
         }
 
         else if (primeInt == 12)
@@ -145,7 +145,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "Whatever or whoever it is... its energy is heavy... Do you feel it too?";
+            StartCoroutine(TypeText(Char2speech,  "Whatever or whoever it is... its energy is heavy... Do you feel it too?"));
         }
 
         else if (primeInt == 13)
@@ -153,7 +153,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "I'm not sure I understand.";
+            StartCoroutine(TypeText(Char2speech, "I'm not sure I understand."));
         }
 
         else if (primeInt == 14)
@@ -169,7 +169,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "Please help me doctor! It’s in this building. I can feel it.";
+            StartCoroutine(TypeText(Char2speech, "Please help me doctor! It’s in this building. I can feel it."));
         }
 
         else if (primeInt == 16)
@@ -177,7 +177,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Analyst";
-            Char2speech.text = "*You close your eyes and collapse*";
+            StartCoroutine(TypeText(Char2speech, "*You close your eyes and collapse*"));
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -207,4 +207,20 @@ public class Scene5aDialogue : MonoBehaviour
     {
         SceneManager.LoadScene("Scene5b");
     }
+
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
+
 }
