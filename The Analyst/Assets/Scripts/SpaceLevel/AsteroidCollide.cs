@@ -1,0 +1,86 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AsteroidCollide : MonoBehaviour
+{
+    private Health playerHealth;
+    private Health enemyHealth;
+    private bool canDamage;
+    private int damageTimer;
+    private AudioSource hit_sfx;
+    private Color originalColor;
+    private Color originalPlayerColor;
+    private SpriteRenderer rend;
+    private Color hitColor;
+    private Color startColor;
+
+
+    // private Rigidbody2D rb;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        playerHealth = GameObject.FindWithTag("GameHandler").GetComponent<Health>();
+        originalPlayerColor = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().color;
+        canDamage = true;
+        damageTimer = 0;
+        if (this.transform.CompareTag("WaterLevelGhost")) {
+            enemyHealth = transform.parent.gameObject.GetComponent<Health>();
+        } else {
+            enemyHealth = GetComponent<Health>();
+        }
+        rend = gameObject.GetComponentInChildren<SpriteRenderer>();
+        originalColor = rend.color;
+        // hitColor = Color.red;
+        hitColor = new Color(2.55f, 0.3f, 0.3f, 1f);
+        startColor = new Color (2.55f, 2.55f, 2.55f, 1f);
+        hit_sfx = GetComponent<AudioSource>();
+    }
+
+    void FixedUpdate() {
+        if (damageTimer > 0) {
+            damageTimer--;
+        } else {
+            canDamage = true;
+            //rend.color = originalColor;
+        }
+    }
+    // Update is called once per frame
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.transform.CompareTag("Player") && canDamage) {
+            SpriteRenderer playerRend = other.transform.GetComponentInChildren<SpriteRenderer>();
+            StartCoroutine(ChangeColor(playerRend, originalPlayerColor));
+            playerHealth.TakeDamage(5);
+            damageTimer = 60;
+            canDamage = false;
+            
+        }
+
+        if(other.transform.CompareTag("Bullet")) {
+            Rigidbody2D bulletRB = other.transform.GetComponent<Rigidbody2D>();
+            // Vector3 bulletVelocity = bulletRB.velocity;
+            // rb.AddForce(bulletVelocity * 0.1, ForceMode2D.Force);
+            StartCoroutine(ChangeColor(rend, originalColor));
+            hit_sfx.Play();
+            enemyHealth.TakeDamage(1);
+            if (enemyHealth.isDead()) {
+                if (this.transform.CompareTag("WaterLevelGhost")) {
+                    Destroy(transform.parent.gameObject);
+                } else {
+                    Destroy(gameObject);
+                }
+                
+            }
+            Destroy(other.transform.gameObject);
+        }
+    }
+    private IEnumerator ChangeColor(SpriteRenderer renderer, Color original)
+    {
+        renderer.color = hitColor;
+        hit_sfx.Play();
+        yield return new WaitForSeconds(0.15f);
+        renderer.color = startColor;
+        Destroy(gameObject);
+    }
+}

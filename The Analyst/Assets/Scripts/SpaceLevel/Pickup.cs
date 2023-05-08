@@ -27,7 +27,7 @@ public class Pickup : MonoBehaviour
                     inventory.isFull[i] = true;
                     /* button goes to same place as slot */
                     Instantiate(itemButton, inventory.slots[i].transform, false);
-                    Destroy(gameObject); /* remove picked up item */
+                    Destroy(gameObject.transform.parent.gameObject); /* remove picked up item */
 
                     break;
                 }
