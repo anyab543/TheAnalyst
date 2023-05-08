@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class PauseMenu : MonoBehaviour {
+public class PauseMenu_Water : MonoBehaviour {
 
         //public static int playerStat;
 
@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour {
         }
 
         public void TryAgain() {
-                SceneManager.LoadScene(currentScene);
+                SceneManager.LoadScene("Water_Level");
         }
 
         public void RestartGame(){

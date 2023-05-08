@@ -233,10 +233,14 @@ PrefabInstance:
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 440328355}
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TryAgain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu_Space, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8624155054724281743, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_Sprite
@@ -499,24 +503,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8730289523087419450, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
 --- !u!1 &440328350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8730289523087419449, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
   m_PrefabInstance: {fileID: 440328349}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &440328351 stripped
+--- !u!114 &440328355
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8730289523087419450, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
-  m_PrefabInstance: {fileID: 440328349}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440328350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa0459007563344b69573804346105a2, type: 3}
+  m_Script: {fileID: 11500000, guid: a954b38527fe142279f88b8f57bf20ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1601069888}
+  mixer: {fileID: 24100000, guid: 44ee9b299ddec40e990d402f51005f7a, type: 2}
+  currentScene: 
 --- !u!1001 &494603730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -627,10 +636,14 @@ PrefabInstance:
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 440328355}
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu_Space, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8624155054724281743, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_Sprite
@@ -757,10 +770,14 @@ PrefabInstance:
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 440328355}
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu_Space, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8624155054724281743, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_Sprite
@@ -1206,7 +1223,7 @@ PrefabInstance:
     - target: {fileID: 324652722816548273, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 0}
     - target: {fileID: 324652722816548273, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
@@ -1214,7 +1231,7 @@ PrefabInstance:
     - target: {fileID: 2684495393630066028, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 0}
     - target: {fileID: 2684495393630066028, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
@@ -1322,7 +1339,7 @@ PrefabInstance:
     - target: {fileID: 5758226525505941300, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 0}
     - target: {fileID: 5758226525505941300, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -1330,7 +1347,7 @@ PrefabInstance:
     - target: {fileID: 5758226525639791554, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 440328351}
+      objectReference: {fileID: 0}
     - target: {fileID: 5758226525639791554, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetLevel
