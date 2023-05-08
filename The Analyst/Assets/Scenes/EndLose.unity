@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 440328351}
     - target: {fileID: 8624155054724281742, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
+      value: TryAgain
       objectReference: {fileID: 0}
     - target: {fileID: 8624155054724281743, guid: fe7aed9ef57fd48348a327da62441b1b, type: 3}
       propertyPath: m_Sprite
