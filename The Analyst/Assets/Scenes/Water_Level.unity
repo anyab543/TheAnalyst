@@ -784,6 +784,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   isPlayer: 0
+  currentScene: 
 --- !u!82 &44976608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9383,6 +9384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAME_CANVAS
       objectReference: {fileID: 0}
+    - target: {fileID: 3649033895374872155, guid: d9552430edced492ca3b81916b7de561, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 1839341753}
     - target: {fileID: 3649033895561076469, guid: d9552430edced492ca3b81916b7de561, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -9418,6 +9423,10 @@ PrefabInstance:
     - target: {fileID: 6370158346469254813, guid: d9552430edced492ca3b81916b7de561, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8376283767504038336, guid: d9552430edced492ca3b81916b7de561, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9552430edced492ca3b81916b7de561, type: 3}
@@ -122525,6 +122534,11 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5349872233897922705, guid: e7636c846733c49799a9c202cbf1b539, type: 3}
   m_PrefabInstance: {fileID: 419742753}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1839341753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4889006952415382689, guid: d9552430edced492ca3b81916b7de561, type: 3}
+  m_PrefabInstance: {fileID: 948560992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1859068056
 PrefabInstance:
