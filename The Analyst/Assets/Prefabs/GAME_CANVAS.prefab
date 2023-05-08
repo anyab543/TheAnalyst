@@ -1058,14 +1058,6 @@ PrefabInstance:
       value: GameHandler
       objectReference: {fileID: 0}
     - target: {fileID: 8730289523087419450, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
-      propertyPath: mixer
-      value: 
-      objectReference: {fileID: 24100000, guid: 44ee9b299ddec40e990d402f51005f7a, type: 2}
-    - target: {fileID: 8730289523087419450, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 4291798698226399990, guid: 6e76551405254448bb9dac72ff5f1dbf, type: 3}
-    - target: {fileID: 8730289523087419450, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 4889006952415382689}
@@ -1116,26 +1108,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4590656051995451297, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
---- !u!1 &3649033895374872152 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8730289523087419449, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
-  m_PrefabInstance: {fileID: 5443656704700806753}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6268509406739822904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3649033895374872152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d00e057c6cc043e79dd25da4809886b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 0
-  isPlayer: 1
 --- !u!4 &3649033895374872154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8730289523087419451, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
@@ -1146,7 +1118,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8730289523087419450, guid: 1b5b4142731a6486c87b1d0d85cde820, type: 3}
   m_PrefabInstance: {fileID: 5443656704700806753}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3649033895374872152}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa0459007563344b69573804346105a2, type: 3}
@@ -1325,6 +1297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PAUSE_MENU
       objectReference: {fileID: 0}
+    - target: {fileID: 4509107705609686060, guid: bece63f4af566448d977a50745bb6c57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5758226525456146238, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1339,15 +1315,15 @@ PrefabInstance:
       objectReference: {fileID: 3649033895374872155}
     - target: {fileID: 5758226525914036934, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5758226525914036934, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5758226525914036934, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5758226526146122992, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1355,11 +1331,11 @@ PrefabInstance:
       objectReference: {fileID: 3649033895374872155}
     - target: {fileID: 5758226526490517112, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5758226526490517112, guid: bece63f4af566448d977a50745bb6c57, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bece63f4af566448d977a50745bb6c57, type: 3}

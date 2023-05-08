@@ -21,6 +21,8 @@ public class bossControl : MonoBehaviour
     public AudioClip shoot_sfx;
     private AudioSource audioS;
     public GameObject popIN;
+    private SpriteRenderer rend;
+
 
     private TransitionHandler tHandler;
 
@@ -38,6 +40,7 @@ public class bossControl : MonoBehaviour
         final_stand = false;
         tHandler = GameObject.FindWithTag("TransitionHandler").GetComponent<TransitionHandler>();
         audioS = GetComponent<AudioSource>();
+        rend = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -94,8 +97,15 @@ public class bossControl : MonoBehaviour
         if (other.CompareTag("Bullet")) {
             boss_health.TakeDamage(2);
             Destroy(other.transform.gameObject);
+            StartCoroutine(getHit());
         }
 
+    }
+
+    private IEnumerator getHit() {
+        rend.color = new Color(2.55f, 0.3f, 2.55f, 1f);
+        yield return new WaitForSeconds(0.2f);
+        rend.color = new Color (2.55f, 2.55f, 2.55f, 1f);
     }
 
 

@@ -8,10 +8,12 @@ public class Health : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public bool isPlayer = false;
+    public string currentScene;
     
     // Start is called before the first frame update
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene().name;
         currentHealth = maxHealth;
     }
 
@@ -25,8 +27,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount) {
         currentHealth -= amount;
-        if ((currentHealth <= 0)&&(isPlayer)){
-            SceneManager.LoadScene("EndLose");
+        if ((currentHealth <= 0)&&(isPlayer)) {
+            SceneManager.LoadScene(currentScene + "Death");
         }
     }
 
