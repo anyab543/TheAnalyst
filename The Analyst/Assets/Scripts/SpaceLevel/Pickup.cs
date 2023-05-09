@@ -25,12 +25,12 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Player")) {
             for (int i = 0; i < inventory.slots.Length; i++){
                 if (inventory.isFull[i] == false) {
+                    pickup.Play();
                     /* item can be added to inventory */
                     inventory.isFull[i] = true;
                     /* button goes to same place as slot */
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject.transform.parent.gameObject); /* remove picked up item */
-                    pickup.Play();
 
                     break;
                 }
