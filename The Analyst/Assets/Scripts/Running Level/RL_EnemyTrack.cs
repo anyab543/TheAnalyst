@@ -11,14 +11,14 @@ public class RL_EnemyTrack : MonoBehaviour
     private float currentY;
     private float distanceFromCamera;
     private bool inRange;
-    private bool flip;
+    // private bool flip;
 
     private Rigidbody2D rb;
     
 
     private float speed;
     private Transform target;
-    private float rotation_offset;
+    // private float rotation_offset;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +35,8 @@ public class RL_EnemyTrack : MonoBehaviour
         if (GameObject.FindGameObjectWithTag ("Player") != null) {
 			target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
 		}
-        flip = false;
-        rotation_offset = 180f;
+        // flip = false;
+        // rotation_offset = 180f;
         speed = 5f;
     }
 
@@ -62,25 +62,25 @@ public class RL_EnemyTrack : MonoBehaviour
             //     flip = false;
             // }
 
-            if (!flip & target.position.x > transform.position.x) {
-                Vector3 newScale =transform.localScale;
-                newScale.x = -1.0f;
-                transform.localScale = newScale;
-                flip = true;
-                rotation_offset = 0f;
-            } else if (flip & target.position.x < transform.position.x) {
-                Vector3 newScale =transform.localScale;
-                newScale.x = 1.0f;
-                transform.localScale = newScale;
-                flip = false;
-                rotation_offset = 180f;
-            }
+            // if (!flip & target.position.x > transform.position.x) {
+            //     Vector3 newScale =transform.localScale;
+            //     newScale.x = -1.0f;
+            //     transform.localScale = newScale;
+            //     flip = true;
+            //     rotation_offset = 0f;
+            // } else if (flip & target.position.x < transform.position.x) {
+            //     Vector3 newScale =transform.localScale;
+            //     newScale.x = 1.0f;
+            //     transform.localScale = newScale;
+            //     flip = false;
+            //     rotation_offset = 180f;
+            // }
 
 
-            Vector2 lookDir = target.position - transform.position;
+            // Vector2 lookDir = target.position - transform.position;
 			
-            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + rotation_offset;
-			rb.rotation = angle;
+            // float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + rotation_offset;
+			// rb.rotation = angle;
 		}
 
     
