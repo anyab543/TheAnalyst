@@ -122,17 +122,9 @@ public class Scene10aDialogue : MonoBehaviour
             Char2name.text = "Analyst";
             StartCoroutine(TypeText(Char2speech, "I just feel like I’m dreaming too. Haha."));
         }
-        else if (primeInt == 10)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "Analyst";
-            Char2speech.text = "Do you know what that something is?";
-
-        }
 
         // after choice 1b
-        else if (primeInt == 11)
+        else if (primeInt == 10)
         {
             Char1name.text = "";
             Char1speech.text = "";
@@ -140,7 +132,7 @@ public class Scene10aDialogue : MonoBehaviour
             StartCoroutine(TypeText(Char2speech, "Haha well its like you say…"));
         }
 
-        else if (primeInt == 12)
+        else if (primeInt == 11)
         {
             Char1name.text = "";
             Char1speech.text = "";

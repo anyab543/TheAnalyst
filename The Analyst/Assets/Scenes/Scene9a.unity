@@ -1177,7 +1177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866844039183271130, guid: 59d40ca81fbd54f17a5bb9bc3342c951, type: 3}
       propertyPath: m_Text
-      value: Walk into the hallway
+      value: Go into the office
       objectReference: {fileID: 0}
     - target: {fileID: 8023323216469771435, guid: 59d40ca81fbd54f17a5bb9bc3342c951, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

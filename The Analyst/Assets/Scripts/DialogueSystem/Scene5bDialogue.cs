@@ -90,7 +90,7 @@ public class Scene5bDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
-            allowSpace = true;
+            allowSpace = false;
             NextScene1Button.SetActive(true);
         }
 
@@ -129,7 +129,7 @@ public class Scene5bDialogue : MonoBehaviour
     }
     public void SceneChange2()
     {
-        SceneManager.LoadScene("Scene2b");
+        SceneManager.LoadScene("DemoRoom");
     }
 
     IEnumerator TypeText(Text target, string fullText)
