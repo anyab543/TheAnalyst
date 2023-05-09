@@ -53,7 +53,7 @@ public class BreathMeter : MonoBehaviour
     {
         
         if (timer_curr > 0) {
-            timer_curr -= Time.deltaTime * 3f;
+            timer_curr -= Time.deltaTime * 2.8f;
         } else {
             timer_curr = 0;
         }

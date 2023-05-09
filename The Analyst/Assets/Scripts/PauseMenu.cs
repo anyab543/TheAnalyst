@@ -26,6 +26,8 @@ public class PauseMenu : MonoBehaviour {
         }
 
         void Start () {
+                // pauseMenuUI = GameObject.FindWithTag("PAUSEMENU");
+
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
                 currentScene = gameObject.GetComponent<Health>().currentScene;
@@ -49,6 +51,7 @@ public class PauseMenu : MonoBehaviour {
         }
 
         public void Resume(){
+                //Debug.Log("HIII");
                 pauseMenuUI.SetActive(false);
                 Time.timeScale = 1f;
                 GameisPaused = false;

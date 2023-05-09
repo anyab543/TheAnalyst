@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3fdc2a3945e454444b1299e4d50c182f
+  - enabled: 0
     path: Assets/Scenes/Dialogue.unity
     guid: c59ed9b8c04a841ce9d0bfc135659ed7
   - enabled: 1
@@ -56,9 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Water_Level.unity
     guid: d05b7c8c6d6cc48708c50e131a34d8d4
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 3fdc2a3945e454444b1299e4d50c182f
   - enabled: 1
     path: Assets/Scenes/RunningLevel.unity
     guid: 500d0f6c4ca1d4024b57f2735e839ecc
