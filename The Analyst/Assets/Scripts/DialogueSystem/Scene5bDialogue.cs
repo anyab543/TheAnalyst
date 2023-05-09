@@ -125,7 +125,7 @@ public class Scene5bDialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("SpaceLevel");
+        SceneManager.LoadScene("DemoRoom");
     }
     public void SceneChange2()
     {

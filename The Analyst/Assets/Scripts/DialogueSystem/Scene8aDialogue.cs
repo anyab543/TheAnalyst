@@ -110,7 +110,7 @@ public class Scene8aDialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene8a");
+        SceneManager.LoadScene("Scene9a");
     }
     public void SceneChange2()
     {
