@@ -11,12 +11,14 @@ public class FixScript : MonoBehaviour
     public GameObject pressSpace;
     public bool isCurrentlyColliding;
     private float waitTime = 3.0f;
+    private AudioSource fix;
 
     // Start is called before the first frame update
     void Start()
     {
         isCurrentlyColliding = false;
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        fix = gameObject.GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -35,9 +37,10 @@ public class FixScript : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space) && inventory.isFull[0] == true && inventory.isFull[1] == true && isCurrentlyColliding == true) {
                         fixedWire.gameObject.SetActive(true);
+                        fix.Play();
                         brokenWire.gameObject.SetActive(false);
                         StartCoroutine(waitWin());
-                        SceneManager.LoadScene("Water_Level");
+                        SceneManager.LoadScene("Scene11a");
         }   
     }
 
