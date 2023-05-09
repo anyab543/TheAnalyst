@@ -10,7 +10,7 @@ public class FixScript : MonoBehaviour
     public GameObject brokenWire;
     public GameObject pressSpace;
     public bool isCurrentlyColliding;
-    private float waitTime = 5.0f;
+    private float waitTime = 3.0f;
     private AudioSource fix;
 
     // Start is called before the first frame update
