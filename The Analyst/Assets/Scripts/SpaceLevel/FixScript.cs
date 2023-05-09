@@ -37,14 +37,16 @@ public class FixScript : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space) && inventory.isFull[0] == true && inventory.isFull[1] == true && isCurrentlyColliding == true) {
                         fixedWire.gameObject.SetActive(true);
-                        fix.Play();
+                        
                         brokenWire.gameObject.SetActive(false);
                         StartCoroutine(waitWin());
-                        SceneManager.LoadScene("Scene11a");
+                        
         }   
     }
 
     IEnumerator waitWin() {
+            fix.Play();
             yield return new WaitForSeconds(waitTime);
+            SceneManager.LoadScene("Scene11a");
     }
 }
