@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UnlockDoor : MonoBehaviour{
 
-      public string NextLevel = "EndWin";
+      public string NextLevel = "SpaceLevel";
 
       public void OnTriggerEnter2D(Collider2D other){
             if (other.gameObject.tag == "Player"){
