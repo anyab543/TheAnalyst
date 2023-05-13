@@ -59,23 +59,23 @@ public class SpaceMovement : MonoBehaviour {
     //         }
     //   }
 
-      void Update(){
+      void FixedUpdate(){
             //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1 
            //hMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
            if (isAlive == true) {
                   //transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
                   if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
-                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(1f, 0f));
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(1.5f, 0f));
                   }
                   if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
-                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(-1f, 0f));
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(-1.5f, 0f));
                   }
                   if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
-                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(0f, 1f));
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(0f, 1.5f));
                   }
                   if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
-                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(0f, -1f));
+                        GetComponent<Rigidbody2D> ().AddForce (new Vector2(0f, -1.5f));
                   }
 
                   if (Input.GetAxis("Horizontal") != 0 || (Input.GetAxis("Vertical") != 0)){ 

@@ -18,6 +18,7 @@ TagManager:
   - Boss
   - Pulse
   - PAUSEMENU
+  - Marker
   layers:
   - Default
   - TransparentFX

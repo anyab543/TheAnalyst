@@ -16,7 +16,7 @@ public class deployAsteroids : MonoBehaviour
 
     private void spawn() {
             GameObject a = Instantiate(asteroids) as GameObject;
-            a.transform.position = new Vector2(Random.Range(-cameraTransform.position.x - 5, cameraTransform.position.x + 5), cameraTransform.position.y + 8);
+            a.transform.position = new Vector2(Random.Range(cameraTransform.position.x - 5, cameraTransform.position.x + 15), cameraTransform.position.y + 11);
     }
 
     IEnumerator asteroidWave() {
