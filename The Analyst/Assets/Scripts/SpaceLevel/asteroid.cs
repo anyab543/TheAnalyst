@@ -12,7 +12,6 @@ public class asteroid : MonoBehaviour {
     // Use this for initialization
     void Start () {
         speed = 1.5f + Random.Range(-1f, 0.5f);
-        Debug.Log(speed);
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = (new Vector2(-speed, -speed));
 

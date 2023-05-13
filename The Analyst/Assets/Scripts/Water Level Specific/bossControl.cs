@@ -217,9 +217,9 @@ public class bossControl : MonoBehaviour
     }
 
     private IEnumerator finalStand() {
-        float delay = 0.1f;
+        float delay = 0.05f;
         while (boss_health.currentHealth > 0) {
-            delay += 0.1f;
+            delay = delay * 2f;
             boss_teleport();
             yield return new WaitForSeconds(0.3f);
             audioS.PlayOneShot(shoot_sfx);

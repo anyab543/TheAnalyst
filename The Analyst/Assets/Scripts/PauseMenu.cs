@@ -26,14 +26,17 @@ public class PauseMenu : MonoBehaviour {
         }
 
         void Start () {
-                // pauseMenuUI = GameObject.FindWithTag("PAUSEMENU");
-
+                // pauseMenuUI = GameObject.FindGameObjectWithTag("pMenu");
+                // if (pauseMenuUI == null) {
+                //         Debug.Log("Oops");
+                // }
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
                 currentScene = gameObject.GetComponent<Health>().currentScene;
         }
 
         void Update (){
+                
                 if (Input.GetKeyDown(KeyCode.Escape)){
                         if (GameisPaused){
                                 Resume();
@@ -48,10 +51,16 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
                 GameisPaused = true;
+                if (pauseMenuUI == null) {
+                        Debug.Log("JKHSDKAJHSDKJ");
+                }
         }
 
         public void Resume(){
                 //Debug.Log("HIII");
+                if (pauseMenuUI == null) {
+                        Debug.Log("JKHSDKAJHSDKJ");
+                }
                 pauseMenuUI.SetActive(false);
                 Time.timeScale = 1f;
                 GameisPaused = false;
