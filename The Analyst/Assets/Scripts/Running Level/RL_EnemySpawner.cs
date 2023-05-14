@@ -118,24 +118,27 @@ public class RL_EnemySpawner : MonoBehaviour
             }
         }
 
-        if(boss_p1 & boss_health.currentHealth <= 75) {
-            boss_p2 = true;
-            boss_p1 = false;
+        // if(boss_p1 & boss_health.currentHealth <= 75) {
+        //     boss_p2 = true;
+        //     boss_p1 = false;
 
-        } else if (boss_p2 & boss_health.currentHealth <= 50) {
-            boss_p3 = true;
-            boss_p2 = false;
-        } else if (boss_p3 & boss_health.currentHealth <= 25) {
-            boss_p4 = true;
-            boss_p3 = false;
-        } else if (boss_p4 & boss_health.currentHealth <= 2) {
-            boss_p4 = false;
-            final_stand = true;
-            gameObject.transform.position = new Vector3 (22, -350, 0);
-            StartCoroutine(finalStand());
-        } else if (final_stand & boss_health.currentHealth <= 0) {
-            final_stand = false;
-            //tHandler.boss_dead = true;
+        // } else if (boss_p2 & boss_health.currentHealth <= 50) {
+        //     boss_p3 = true;
+        //     boss_p2 = false;
+        // } else if (boss_p3 & boss_health.currentHealth <= 25) {
+        //     boss_p4 = true;
+        //     boss_p3 = false;
+        // } else if (boss_p4 & boss_health.currentHealth <= 2) {
+        //     boss_p4 = false;
+        //     final_stand = true;
+        //     //gameObject.transform.position = new Vector3 (22, -350, 0);
+        //     //StartCoroutine(finalStand());
+        // } else if (final_stand & boss_health.currentHealth <= 0) {
+        //     final_stand = false;
+        //     //tHandler.boss_dead = true;
+        // }
+        if (boss_health.currentHealth <= 0) {
+            Destroy(gameObject);
         }
     }
 
