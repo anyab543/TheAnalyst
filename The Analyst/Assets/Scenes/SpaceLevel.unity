@@ -4213,11 +4213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889006952415382689, guid: d9552430edced492ca3b81916b7de561, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4889006952415382689, guid: d9552430edced492ca3b81916b7de561, type: 3}
       propertyPath: m_TagString
-      value: pMenu
+      value: PAUSEMENU
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9552430edced492ca3b81916b7de561, type: 3}

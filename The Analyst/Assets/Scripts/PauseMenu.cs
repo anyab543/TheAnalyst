@@ -58,10 +58,11 @@ public class PauseMenu : MonoBehaviour {
         }
 
         public void Resume(){
-                //Debug.Log("HIII");
-                if (pauseMenuUI == null) {
-                        Debug.Log("JKHSDKAJHSDKJ");
-                }
+                // Debug.Log("HIII");
+                pauseMenuUI = GameObject.FindWithTag("PAUSEMENU");
+                // if (pauseMenuUI == null) {
+                //         Debug.Log("JKHSDKAJHSDKJ");
+                // }
                 pauseMenuUI.SetActive(false);
                 Time.timeScale = 1f;
                 GameisPaused = false;
